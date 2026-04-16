@@ -1,0 +1,225 @@
+/* =====================================================
+   MENU — Restaurant Menu Section
+   ===================================================== */
+
+.menu {
+  background: var(--bg-light);
+  color: var(--color-dark);
+  padding: var(--space-32) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu::before {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 148, 29, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Section Header overrides for light bg ────────── */
+.menu .section-header h2 {
+  color: var(--color-dark);
+}
+
+.menu .section-header p {
+  color: rgba(28, 38, 50, 0.60);
+}
+
+.menu .section-header .tag {
+  color: var(--color-orange-dark);
+}
+
+/* ── Tab Navigation ───────────────────────────────── */
+.menu__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.menu__tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: rgba(28, 38, 50, 0.55);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.menu__tab svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.menu__tab:hover {
+  color: var(--color-dark);
+  border-color: rgba(28, 38, 50, 0.20);
+  transform: translateY(-1px);
+}
+
+.menu__tab.is-active {
+  background: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+  box-shadow: 0 4px 16px rgba(247, 148, 29, 0.30);
+}
+
+/* ── Panels ───────────────────────────────────────── */
+.menu__panel {
+  display: none;
+}
+
+.menu__panel.is-active {
+  display: block;
+  animation: fadeIn 0.35s ease-out;
+}
+
+/* ── Grid of Cards ────────────────────────────────── */
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+/* ── Menu Card ────────────────────────────────────── */
+.menu-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(28, 38, 50, 0.08);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(28, 38, 50, 0.15);
+}
+
+/* Image placeholder */
+.menu-card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4edf5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card__img svg {
+  width: 64px;
+  height: 64px;
+  color: var(--color-cyan-dark);
+  opacity: 0.45;
+}
+
+/* Coming soon badge */
+.menu-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 3px var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.menu-card__body {
+  padding: var(--space-5) var(--space-6);
+}
+
+.menu-card__name {
+  font-family: var(--font-brand);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-dark);
+  margin-bottom: var(--space-2);
+}
+
+.menu-card__desc {
+  font-size: var(--fs-sm);
+  color: rgba(28, 38, 50, 0.55);
+  line-height: var(--lh-normal);
+  max-width: none;
+  margin: 0 0 var(--space-4);
+}
+
+.menu-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-card__price {
+  font-family: var(--font-brand);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-regular);
+  color: var(--color-orange);
+}
+
+.menu-card__tag {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(28, 38, 50, 0.40);
+}
+
+/* ── Coming Soon Banner ───────────────────────────── */
+.menu__coming {
+  text-align: center;
+  padding: var(--space-16) 0 0;
+  border-top: 1px solid rgba(28, 38, 50, 0.08);
+  margin-top: var(--space-12);
+}
+
+.menu__coming p {
+  font-size: var(--fs-sm);
+  color: rgba(28, 38, 50, 0.45);
+  max-width: none;
+  margin: 0 auto;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .menu__tabs {
+    gap: var(--space-2);
+  }
+
+  .menu__tab {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-xs);
+  }
+
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+}

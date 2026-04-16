@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El Palmar — Mariscos y Sushi en Mazatlán, Sinaloa. Sabores del Pacífico con precisión japonesa.">
+  <meta name="theme-color" content="#071828">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="El Palmar · Mariscos + Sushi · Mazatlán">
+  <meta property="og:description" content="No venimos a convencerte. El mar lo hará por nosotros.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="es_MX">
+
+  <title>El Palmar · Mariscos + Sushi · Mazatlán</title>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════════════════ -->
+  <div id="preloader" role="status" aria-label="Cargando El Palmar" aria-live="polite">
+    <div class="preloader__backdrop"></div>
+    <div class="preloader__bubbles" id="preloader-bubbles"></div>
+    <div class="preloader__logo">
+      <span class="preloader__logo-name">El Palmar</span>
+      <span class="preloader__logo-sub">Mariscos + Sushi · Mazatlán</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════════════════════ -->
+  <div id="cursor" class="cursor" aria-hidden="true">
+    <div class="cursor__bubble"></div>
+  </div>
+
+  <div id="cursor-foam" class="cursor-foam" aria-hidden="true">
+    <div class="cursor-foam__dot"></div>
+    <div class="cursor-foam__dot"></div>
+    <div class="cursor-foam__dot"></div>
+  </div>
+
+  <div id="cursor-trail" class="cursor-trail" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════
+       MOBILE OVERLAY
+  ══════════════════════════════════════════════════ -->
+  <div id="navOverlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER / NAVIGATION
+  ══════════════════════════════════════════════════ -->
+  <header class="header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Navegación principal">
+
+      <!-- Logo -->
+      <a href="#inicio" class="nav__logo" aria-label="El Palmar — Volver al inicio">
+        <img src="assets/logo-Photoroom.png" alt="El Palmar Mariscos + Sushi" width="110" height="69">
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Menú</a></li>
+        <li><a href="#resenas" data-i18n="nav.reviews">Reseñas</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="nav__controls">
+        <!-- Language toggle -->
+        <button class="lang-toggle" aria-label="Cambiar idioma / Switch language">
+          <span class="lang-toggle__item is-active" data-lang="es">ES</span>
+          <span class="lang-toggle__item" data-lang="en">EN</span>
+        </button>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav id="navDrawer" class="nav__drawer" role="navigation" aria-label="Menú móvil">
+    <a href="#nosotros" data-i18n="nav.about">Nosotros</a>
+    <a href="#menu" data-i18n="nav.menu">Menú</a>
+    <a href="#resenas" data-i18n="nav.reviews">Reseñas</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════ -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+
+      <!-- Parallax sky layer -->
+      <div class="hero__layer hero__layer--sky" aria-hidden="true"></div>
+
+      <!-- Stars container -->
+      <div class="hero__stars" aria-hidden="true"></div>
+
+      <!-- Parallax ocean surface layer -->
+      <div class="hero__layer hero__layer--ocean" aria-hidden="true"></div>
+
+      <!-- Palm tree right -->
+      <svg class="hero__palm" viewBox="0 0 200 560" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Trunk -->
+        <path d="M104 540 C100 490 96 430 98 370 C100 310 106 260 110 200 C112 170 112 140 110 110" stroke="#0A1E2F" stroke-width="10" stroke-linecap="round" fill="none"/>
+        <path d="M110 110 C108 100 106 90 104 80" stroke="#0A1E2F" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <!-- Leaf 1 (right) -->
+        <path d="M108 85 C130 60 162 44 185 50 C190 52 188 58 182 60 C160 68 134 76 112 98" fill="#0A1E2F"/>
+        <!-- Leaf 2 (left) -->
+        <path d="M106 88 C82 66 50 52 28 60 C22 63 24 69 30 70 C52 76 82 82 108 100" fill="#0A1E2F"/>
+        <!-- Leaf 3 (top right) -->
+        <path d="M110 80 C124 52 148 28 170 28 C176 28 176 34 172 38 C156 52 130 68 112 90" fill="#0A1E2F"/>
+        <!-- Leaf 4 (top left) -->
+        <path d="M104 82 C88 56 62 34 40 36 C34 36 34 42 38 46 C54 60 82 72 106 92" fill="#0A1E2F"/>
+        <!-- Leaf 5 (straight up) -->
+        <path d="M108 78 C104 50 106 20 110 4 C112 -2 117 -2 118 4 C120 20 116 52 112 80" fill="#0A1E2F"/>
+        <!-- Coconuts -->
+        <circle cx="112" cy="96" r="7" fill="#8B5E3C"/>
+        <circle cx="102" cy="104" r="6" fill="#8B5E3C"/>
+        <circle cx="120" cy="102" r="5.5" fill="#8B5E3C"/>
+      </svg>
+
+      <!-- Palm tree left (mirrored, smaller) -->
+      <svg class="hero__palm hero__palm--left" viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M90 390 C92 350 94 300 96 250 C98 200 100 160 100 120 C100 95 98 75 96 60" stroke="#0A1E2F" stroke-width="8" stroke-linecap="round" fill="none"/>
+        <path d="M100 65 C110 48 130 34 148 38 C153 40 151 45 146 47 C130 53 112 58 102 76" fill="#0A1E2F"/>
+        <path d="M98 68 C84 52 62 42 44 48 C39 50 41 56 46 57 C62 62 84 66 100 78" fill="#0A1E2F"/>
+        <path d="M100 60 C110 40 126 22 142 20 C148 20 148 26 144 30 C130 42 110 56 102 72" fill="#0A1E2F"/>
+        <circle cx="100" cy="76" r="6" fill="#8B5E3C"/>
+        <circle cx="92" cy="82" r="5" fill="#8B5E3C"/>
+      </svg>
+
+      <!-- Ocean wave layers at bottom of hero -->
+      <div class="hero__waves" aria-hidden="true">
+        <svg class="hero__wave-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Back wave -->
+          <path d="M0 60 C180 100 360 20 540 60 C720 100 900 20 1080 60 C1260 100 1350 50 1440 60 L1440 120 L0 120 Z" fill="#0D2A42" opacity="0.50"/>
+          <!-- Mid wave -->
+          <path d="M0 70 C120 40 280 90 480 70 C680 50 860 90 1080 70 C1220 56 1360 80 1440 70 L1440 120 L0 120 Z" fill="#0A2540" opacity="0.65"/>
+          <!-- Front wave (darkest, becomes the section below) -->
+          <path d="M0 85 C160 55 320 100 520 85 C720 70 900 100 1120 85 C1280 74 1380 90 1440 85 L1440 120 L0 120 Z" fill="#071828"/>
+          <!-- White foam line -->
+          <path d="M0 82 C120 62 260 92 480 78 C700 64 880 90 1100 76 C1240 67 1360 82 1440 78" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+
+      <!-- Hero content -->
+      <div class="hero__content">
+        <span class="hero__eyebrow" data-i18n="hero.eyebrow">Mazatlán, Sinaloa · México</span>
+
+        <h1 id="hero-title" class="hero__title">
+          <span data-i18n="hero.title">No venimos a convencerte.</span><br>
+          <span class="accent" data-i18n="hero.title2">El mar lo hará por nosotros.</span>
+        </h1>
+
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Mariscos que recuerdan el Pacífico. Sushi que reescribe lo que conoces del mar.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#menu" class="btn btn--primary" data-i18n="hero.cta">Explorar el menú</a>
+          <a href="#contacto" class="btn btn--ghost" data-i18n="hero.cta2">Reservar mesa</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text" data-i18n="hero.scroll">Desplazar</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════════ -->
+    <section id="nosotros" class="about section" aria-labelledby="about-title">
+      <div class="container">
+
+        <!-- Two-column -->
+        <div class="about__grid">
+
+          <!-- Text -->
+          <div class="about__text animate-fade-up">
+            <span class="tag" data-i18n="about.tag">Nuestra historia</span>
+            <h2 id="about-title" data-i18n="about.title">El océano en cada bocado</h2>
+            <p data-i18n="about.body1">
+              Mazatlán tiene un secreto: los mejores mariscos no se anuncian, se descubren. Y una vez que los pruebas, el Océano Pacífico nunca vuelve a ser el mismo fondo de pantalla.
+            </p>
+            <p data-i18n="about.body2">
+              En El Palmar fusionamos la tradición pesquera de Sinaloa con la precisión del sushi japonés. Cada plato es una conversación entre dos mares, dos culturas y un solo propósito: que te quedes sin palabras.
+            </p>
+            <a href="#menu" class="btn btn--outline" data-i18n="about.cta">Ver el menú completo</a>
+          </div>
+
+          <!-- Visual -->
+          <div class="about__visual animate-fade-in delay-2">
+            <div class="about__ring" aria-hidden="true"></div>
+            <div class="about__ring about__ring--outer" aria-hidden="true"></div>
+
+            <div class="about__logo-center">
+              <img src="assets/logo-Photoroom.png" alt="El Palmar" width="180" height="113">
+            </div>
+
+            <!-- Floating stats -->
+            <div class="about__stat about__stat--1">
+              <strong>+8</strong>
+              <span data-i18n="about.stat1">Años frente al mar</span>
+            </div>
+            <div class="about__stat about__stat--2">
+              <strong>+40</strong>
+              <span data-i18n="about.stat2">Platillos únicos</span>
+            </div>
+            <div class="about__stat about__stat--3">
+              <strong>4.8</strong>
+              <span>Google ★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="about__features">
+
+          <!-- Card 1 -->
+          <article class="feature-card animate-fade-up delay-1">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Anchor / Boat icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="5" r="2"/>
+                <path d="M12 7v10M5 12c0 4 3.5 7 7 7s7-3 7-7"/>
+                <path d="M5 12H2m20 0h-3"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.f1.title">Del barco al plato</h3>
+            <p data-i18n="about.f1.body">Trabajamos directamente con pescadores locales. Sin intermediarios, sin frigoríficos de por medio. El producto llega fresco cada mañana.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card animate-fade-up delay-3">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Chopsticks / fusion icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3L6 21M16 3L18 21"/>
+                <path d="M6 8h12M6 16h12"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.f2.title">Fusión sin forzar</h3>
+            <p data-i18n="about.f2.body">No mezclamos por moda. Mezclamos porque el camarón sinaloense y el arroz de sushi nacieron para encontrarse.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card animate-fade-up delay-5">
+            <div class="feature-card__icon" aria-hidden="true">
+              <!-- Palm / atmosphere icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V12"/>
+                <path d="M12 12C10 8 6 6 3 8c3-1 6 2 9 4"/>
+                <path d="M12 12c2-4 6-6 9-4-3-1-6 2-9 4"/>
+                <path d="M12 8c0-3 2-6 4-7-2 1-3 4-4 7"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.f3.title">Ambiente que acompaña</h3>
+            <p data-i18n="about.f3.body">La palapa, la brisa y el rumor del mar de fondo. Un lugar donde el tiempo corre a otra velocidad.</p>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Wave divider -->
+      <div class="about__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40 C240 80 480 0 720 40 C960 80 1200 0 1440 40 L1440 80 L0 80 Z" fill="#F4FBFD"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         MENU
+    ════════════════════════════════════════════════ -->
+    <section id="menu" class="menu section" aria-labelledby="menu-title">
+      <div class="container">
+
+        <header class="section-header animate-fade-up">
+          <span class="tag" data-i18n="menu.tag">Lo que preparamos</span>
+          <h2 id="menu-title" data-i18n="menu.title">El menú</h2>
+          <p data-i18n="menu.subtitle">Próximamente añadiremos todo nuestro menú aquí. Por ahora, ven y déjate sorprender.</p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="menu__tabs" role="tablist" aria-label="Categorías del menú">
+          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-mariscos" id="tab-mariscos" data-tab="mariscos">
+            <!-- Wave icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M2 12 C5 8 8 16 12 12 C16 8 19 16 22 12"/>
+            </svg>
+            <span data-i18n="menu.tab1">Mariscos</span>
+          </button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-sushi" id="tab-sushi" data-tab="sushi">
+            <!-- Chopsticks icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <line x1="8" y1="3" x2="7" y2="21"/>
+              <line x1="16" y1="3" x2="17" y2="21"/>
+            </svg>
+            <span data-i18n="menu.tab2">Sushi</span>
+          </button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-especialidades" id="tab-especialidades" data-tab="especialidades">
+            <!-- Star icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span data-i18n="menu.tab3">Especialidades</span>
+          </button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-bebidas" id="tab-bebidas" data-tab="bebidas">
+            <!-- Cup icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M17 8h2a2 2 0 1 1 0 4h-2"/>
+              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+              <line x1="6" x2="6" y1="2" y2="4"/>
+              <line x1="10" x2="10" y1="2" y2="4"/>
+              <line x1="14" x2="14" y1="2" y2="4"/>
+            </svg>
+            <span data-i18n="menu.tab4">Bebidas</span>
+          </button>
+        </div>
+
+        <!-- Panel: Mariscos -->
+        <div id="panel-mariscos" class="menu__panel is-active" role="tabpanel" aria-labelledby="tab-mariscos">
+          <div class="menu__grid">
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <!-- Shell / seafood illustration -->
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M32 8 C18 8 8 18 8 32 C8 46 18 56 32 56 C46 56 56 46 56 32 C56 18 46 8 32 8 Z" stroke-dasharray="3 2" opacity="0.5"/>
+                  <path d="M32 16 C22 16 16 22 16 32 C16 42 22 48 32 48 C42 48 48 42 48 32"/>
+                  <path d="M32 16 L32 48 M22 22 L42 42 M22 42 L42 22"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Entrada</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Ceviche de Camarón</h3>
+                <p class="menu-card__desc">Camarón fresco del Pacífico, limón sinaloense, chile serrano y pepino. El mar en estado puro.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$145</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="32" cy="32" rx="20" ry="14" opacity="0.5"/>
+                  <path d="M12 32 C12 20 20 14 32 14 C44 14 52 20 52 32"/>
+                  <path d="M20 28 C20 24 24 22 32 22 C40 22 44 24 44 28"/>
+                  <circle cx="32" cy="34" r="6"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Fuerte</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Aguachile Negro</h3>
+                <p class="menu-card__desc">Camarón marinado en salsa negra de chile morita y limón. Picante, oscuro y elegante.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$195</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M10 40 C10 28 18 20 32 18 C46 20 54 28 54 40 L54 46 L10 46 Z" opacity="0.5"/>
+                  <path d="M10 40 C18 36 28 38 32 36 C36 38 46 36 54 40"/>
+                  <circle cx="24" cy="32" r="4"/>
+                  <circle cx="40" cy="30" r="5"/>
+                  <circle cx="32" cy="35" r="3"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Sopa</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Caldo de Camarón</h3>
+                <p class="menu-card__desc">El caldo que antecede todo buen banquete. Receta de la abuela con jitomate asado y epazote.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$120</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="14" y="28" width="36" height="18" rx="4" opacity="0.5"/>
+                  <path d="M14 36 C22 32 30 38 38 34 C44 31 52 35 50 36"/>
+                  <path d="M18 28 C20 20 28 16 32 16 C36 16 44 20 46 28"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Fuerte</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Tiradito de Camarón</h3>
+                <p class="menu-card__desc">Corte en láminas delgadas, aderezo cítrico con aceite de ajonjolí y toques de jengibre fresco.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$175</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Sushi -->
+        <div id="panel-sushi" class="menu__panel" role="tabpanel" aria-labelledby="tab-sushi">
+          <div class="menu__grid">
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="32" cy="32" r="18" opacity="0.4"/>
+                  <circle cx="32" cy="32" r="11"/>
+                  <circle cx="32" cy="32" r="5"/>
+                  <path d="M32 14 L32 18 M32 46 L32 50 M14 32 L18 32 M46 32 L50 32"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Roll</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Roll Pacífico</h3>
+                <p class="menu-card__desc">Atún del Pacífico, aguacate crema y arroz al vinagre. Una ola en un bocado.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$185</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="16" y="22" width="32" height="20" rx="10" opacity="0.4"/>
+                  <path d="M24 32 C24 26 40 26 40 32"/>
+                  <ellipse cx="32" cy="36" rx="10" ry="6"/>
+                  <path d="M26 28 L38 28"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Roll</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Roll de Camarón Bañado</h3>
+                <p class="menu-card__desc">Camarón sinaloense rebozado, cubierto con salsa ponzu y chile de árbol tostado.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$195</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 44 L20 24 L44 24 L44 44 Z" opacity="0.4"/>
+                  <path d="M26 24 C26 18 38 18 38 24"/>
+                  <path d="M20 32 L44 32"/>
+                  <circle cx="32" cy="28" r="3"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Nigiri</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Nigiri Tataki</h3>
+                <p class="menu-card__desc">Atún sellado al fuego sobre colchón de arroz. Wasabi fresco, cebollín y salsa ponzu.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$220</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="32" cy="38" rx="20" ry="12" opacity="0.4"/>
+                  <path d="M12 38 C12 30 20 24 32 24 C44 24 52 30 52 38"/>
+                  <circle cx="32" cy="28" r="8"/>
+                  <path d="M28 26 L36 30 L28 32"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Roll</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Dragon Roll</h3>
+                <p class="menu-card__desc">Camarón tempura cubierto con láminas de aguacate, salsa de mango y chile habanero.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$215</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Especialidades -->
+        <div id="panel-especialidades" class="menu__panel" role="tabpanel" aria-labelledby="tab-especialidades">
+          <div class="menu__grid">
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="32,10 40,26 58,26 44,38 50,54 32,44 14,54 20,38 6,26 24,26" opacity="0.4"/>
+                  <polygon points="32,18 37,30 50,30 40,38 44,50 32,42 20,50 24,38 14,30 27,30"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Palmar</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Sashimi de Aguachile</h3>
+                <p class="menu-card__desc">La fusión que define El Palmar: sashimi de atún bañado en aguachile negro de temporada.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$250</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M10 42 C10 28 20 18 32 18 C44 18 54 28 54 42 L54 50 L10 50 Z" opacity="0.4"/>
+                  <path d="M18 42 C22 36 28 40 32 38 C36 40 42 36 46 42"/>
+                  <circle cx="32" cy="28" r="6"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Palmar</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Tostada Palmar</h3>
+                <p class="menu-card__desc">Tostada artesanal con camarón curado, pulpo encurtido y chiles toreados. Una tesis sobre el mar.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$165</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Bebidas -->
+        <div id="panel-bebidas" class="menu__panel" role="tabpanel" aria-labelledby="tab-bebidas">
+          <div class="menu__grid">
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 16 L16 48 L48 48 L44 16 Z" opacity="0.4"/>
+                  <path d="M22 28 L42 28"/>
+                  <circle cx="32" cy="22" r="4"/>
+                  <path d="M32 16 L32 12 C36 8 40 10 38 14"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Cóctel</span>
+                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                </div>
+                <h3 class="menu-card__name">Michelada del Mar</h3>
+                <p class="menu-card__desc">Clamato, chile chamoy, limón, sal de chapulín. La bebida que Mazatlán inventó.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$85</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Coming soon note -->
+        <div class="menu__coming animate-fade-up delay-4">
+          <p data-i18n="menu.coming">Menú completo próximamente — cada platillo fotografiado y descrito.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         REVIEWS
+    ════════════════════════════════════════════════ -->
+    <section id="resenas" class="reviews section" aria-labelledby="reviews-title">
+      <div class="container">
+
+        <header class="section-header animate-fade-up">
+          <span class="tag" data-i18n="reviews.tag">Lo que dicen</span>
+          <h2 id="reviews-title" data-i18n="reviews.title">Voces del mar</h2>
+          <p data-i18n="reviews.subtitle">No publicidad. Solo personas que se sentaron, comieron y volvieron a casa con algo que contar.</p>
+        </header>
+
+        <!-- Carousel -->
+        <div class="reviews__carousel" aria-label="Carrusel de reseñas">
+          <div class="reviews__track" tabindex="0" role="region" aria-label="Reseñas de clientes">
+
+            <!-- Review 1 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "El aguachile negro es brutalmente bueno. Llegamos de Guadalajara y sin duda valió el viaje. El contraste entre el picante y el mariscos fresco es algo que no olvidas fácil."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">CM</div>
+                <div>
+                  <p class="review-card__name">Carlos M.</p>
+                  <p class="review-card__meta">Guadalajara · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Review 2 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "Best sushi I've tried in all of Mexico. The Pacific tuna roll was outstanding — clean, precise, and the avocado cream sauce was unexpected in the best way possible."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">SK</div>
+                <div>
+                  <p class="review-card__name">Sarah K.</p>
+                  <p class="review-card__meta">San Diego, CA · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Review 3 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "Los rolls de aguachile negro son la fusión que Sinaloa merece. Nunca pensé que sushi y mariscos del Pacífico pudieran integrarse tan orgánicamente. Un menú con identidad propia."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">MR</div>
+                <div>
+                  <p class="review-card__name">María R.</p>
+                  <p class="review-card__meta">Culiacán, Sin. · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Review 4 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "Ambiente perfecto para cenar en pareja. La palapa, la brisa marina y el servicio cálido — y encima de todo eso, el caldo de camarón más honesto que he probado en años."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">RV</div>
+                <div>
+                  <p class="review-card__name">Roberto V.</p>
+                  <p class="review-card__meta">Mazatlán, Sin. · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Review 5 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 stars">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "Arrived hungry, left converted. The tuna tataki roll alone is worth the drive to Mazatlán. Seafood that still tastes like the ocean — not like a fridge."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">MT</div>
+                <div>
+                  <p class="review-card__name">Mike T.</p>
+                  <p class="review-card__meta">Phoenix, AZ · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Review 6 -->
+            <article class="review-card">
+              <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+              </div>
+              <blockquote class="review-card__text">
+                "El servicio es cálido y el menú tiene identidad: no es sushi de cadena, no es mariscos de turista. Es algo propio de Sinaloa que se respeta a sí mismo. Volvería en cada visita."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">AL</div>
+                <div>
+                  <p class="review-card__name">Ana L.</p>
+                  <p class="review-card__meta">CDMX · Google Maps</p>
+                </div>
+              </footer>
+            </article>
+
+          </div><!-- .reviews__track -->
+
+          <!-- Controls -->
+          <div class="reviews__controls">
+            <button class="reviews__btn" id="reviewsPrev" aria-label="Reseña anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+            </button>
+
+            <div class="reviews__dots" role="tablist" aria-label="Navegar reseñas"></div>
+
+            <button class="reviews__btn" id="reviewsNext" aria-label="Siguiente reseña">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"/>
+              </svg>
+            </button>
+          </div>
+        </div><!-- .reviews__carousel -->
+
+        <div class="reviews__source animate-fade-in delay-4">
+          <p data-i18n="reviews.source">Reseñas verificadas en Google Maps</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         CONTACT
+    ════════════════════════════════════════════════ -->
+    <section id="contacto" class="contact section" aria-labelledby="contact-title">
+      <div class="container">
+
+        <div class="contact__grid">
+
+          <!-- Map -->
+          <div class="contact__map-wrap">
+            <iframe
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.0!2d-106.4705747!3d23.2856193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8698ab6262a7bdf7%3A0xc34c288bec98aa13!2sEl%20Palmar%20Mariscos%20%2B%20Sushi!5e0!3m2!1ses!2smx!4v1714000000000"
+              src="about:blank"
+              title="Ubicación de El Palmar en Google Maps"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Info -->
+          <div class="contact__info">
+            <span class="tag" data-i18n="contact.tag">Encuéntranos</span>
+            <h2 id="contact-title" data-i18n="contact.title">Ven a donde termina la tierra</h2>
+
+            <!-- Address -->
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact__detail-text">
+                <strong data-i18n="contact.addr.l">Dirección</strong>
+                <p data-i18n="contact.addr.v">Av. del Mar, Mazatlán, Sinaloa, México</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact__detail-text">
+                <strong data-i18n="contact.phone.l">Teléfono / WhatsApp</strong>
+                <a href="tel:+526691005111">+52 669 100 5111</a>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="contact__detail-text">
+                <strong data-i18n="contact.hours.l">Horario</strong>
+                <p data-i18n="contact.hours.v">Lun – Dom · 12:00 pm – 10:00 pm</p>
+              </div>
+            </div>
+
+            <div class="contact__sep" aria-hidden="true"></div>
+
+            <!-- Social links -->
+            <div class="contact__socials">
+              <strong data-i18n="contact.social.l">Redes sociales</strong>
+              <div class="social-links">
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/526691005111" class="social-link social-link--wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de El Palmar">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.535 5.852L.057 23.5l5.797-1.517A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.86 0-3.592-.5-5.084-1.367l-.364-.215-3.441.9.92-3.36-.237-.386A9.808 9.808 0 0 1 2.182 12C2.182 6.59 6.59 2.182 12 2.182c5.41 0 9.818 4.408 9.818 9.818 0 5.41-4.408 9.818-9.818 9.818z"/>
+                  </svg>
+                  <span data-i18n="contact.wa">WhatsApp</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/ElPalmarMzt/" class="social-link social-link--fb" target="_blank" rel="noopener noreferrer" aria-label="Facebook de El Palmar">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span data-i18n="contact.fb">Facebook</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/elpalmarmzt/" class="social-link social-link--ig" target="_blank" rel="noopener noreferrer" aria-label="Instagram de El Palmar">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                  </svg>
+                  <span data-i18n="contact.ig">Instagram</span>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="contact__sep" aria-hidden="true"></div>
+
+            <!-- Delivery apps -->
+            <div class="contact__delivery">
+              <strong data-i18n="contact.delivery.l">Pide a domicilio</strong>
+              <div class="delivery-apps">
+
+                <!-- Rappi -->
+                <a href="https://www.rappi.com.mx/restaurantes/1923749420-el-palmar-mazatlan" class="delivery-btn" target="_blank" rel="noopener noreferrer" aria-label="Ordenar en Rappi">
+                  <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <rect width="32" height="32" rx="8" fill="#FF441F"/>
+                    <path d="M8 24V10a2 2 0 0 1 2-2h4a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4H8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M14 16l6 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>
+                    <small>Pide en</small>
+                    Rappi
+                  </span>
+                </a>
+
+                <!-- Didi Food -->
+                <a href="https://web.didiglobal.com/mx/food/mazatlan-sin/el-palmar-mariscos-sushi/5764607690672965485/" class="delivery-btn" target="_blank" rel="noopener noreferrer" aria-label="Ordenar en DiDi Food">
+                  <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <rect width="32" height="32" rx="8" fill="#FF6B00"/>
+                    <text x="5" y="22" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">DiDi</text>
+                  </svg>
+                  <span>
+                    <small>Pide en</small>
+                    DiDi Food
+                  </span>
+                </a>
+
+              </div>
+            </div>
+
+          </div><!-- .contact__info -->
+        </div><!-- .contact__grid -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo" aria-label="El Palmar — Inicio">
+            <img src="assets/logo-Photoroom.png" alt="El Palmar Mariscos + Sushi" width="90" height="56">
+          </a>
+          <p data-i18n="footer.tagline">Mariscos + Sushi · Mazatlán</p>
+        </div>
+
+        <!-- Nav links -->
+        <div class="footer__col">
+          <h4 data-i18n="footer.nav">Navegación</h4>
+          <ul role="list">
+            <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="#menu" data-i18n="nav.menu">Menú</a></li>
+            <li><a href="#resenas" data-i18n="nav.reviews">Reseñas</a></li>
+            <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer__col">
+          <h4 data-i18n="footer.follow">Síguenos</h4>
+          <ul role="list">
+            <li>
+              <a href="https://wa.me/526691005111" target="_blank" rel="noopener noreferrer" data-i18n="contact.wa">WhatsApp</a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/ElPalmarMzt/" target="_blank" rel="noopener noreferrer" data-i18n="contact.fb">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/elpalmarmzt/" target="_blank" rel="noopener noreferrer" data-i18n="contact.ig">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.rappi.com.mx/restaurantes/1923749420-el-palmar-mazatlan" target="_blank" rel="noopener noreferrer">Rappi</a>
+            </li>
+            <li>
+              <a href="https://web.didiglobal.com/mx/food/mazatlan-sin/el-palmar-mariscos-sushi/5764607690672965485/" target="_blank" rel="noopener noreferrer">DiDi Food</a>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- .footer__top -->
+
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">
+          © 2025 El Palmar Mariscos + Sushi. Todos los derechos reservados.
+        </p>
+        <button class="footer__scroll-top" id="scrollTopBtn" aria-label="Volver arriba">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts — browser-support y language son síncronos para evitar FOUC -->
+  <script src="js/browser-support.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
