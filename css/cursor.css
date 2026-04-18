@@ -51,9 +51,33 @@
   filter: blur(1px);
 }
 
-/* ── Hover State — Bubble Grows (mismo color azul) ── */
+/* ── Hover State — Bubble Grows ──────────────────── */
 .cursor--hover .cursor__bubble {
   transform: scale(1.45);
+}
+
+/* ── Light Background Mode ────────────────────────── */
+/* Se activa cuando el cursor está sobre secciones claras */
+.cursor--on-light {
+  mix-blend-mode: normal;
+}
+
+.cursor--on-light .cursor__bubble {
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(10, 110, 150, 0.65) 0%,
+    rgba(7, 80, 120, 0.45) 45%,
+    rgba(5, 55, 90, 0.18) 75%,
+    transparent 100%
+  );
+  border: 1.5px solid rgba(29, 168, 204, 0.85);
+  box-shadow:
+    0 0 14px rgba(29, 168, 204, 0.25),
+    inset 0 0 8px rgba(255, 255, 255, 0.12);
+}
+
+.cursor-trail--on-light {
+  background: rgba(29, 168, 204, 0.25);
 }
 
 /* ── Foam Bubbles Container ───────────────────────── */

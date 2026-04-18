@@ -28,6 +28,25 @@
   var isActive = false;
   var rafId;
 
+  /* ── Light section detection ────────────────────── */
+  var lightSections = null;
+
+  function updateLightMode(x, y) {
+    if (!lightSections) {
+      lightSections = document.querySelectorAll('[data-cursor="light"]');
+    }
+    var onLight = false;
+    for (var i = 0; i < lightSections.length; i++) {
+      var r = lightSections[i].getBoundingClientRect();
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
+        onLight = true;
+        break;
+      }
+    }
+    cursor.classList.toggle('cursor--on-light', onLight);
+    if (trail) trail.classList.toggle('cursor-trail--on-light', onLight);
+  }
+
   /* ── GSAP-powered move (with fallback) ─────────── */
   function moveCursor() {
     if (window.gsap) {
@@ -109,6 +128,7 @@
   document.addEventListener('mousemove', function (e) {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+    updateLightMode(e.clientX, e.clientY);
     if (!window.gsap && !isActive) {
       isActive = true;
       moveCursor();

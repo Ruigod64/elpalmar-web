@@ -24,6 +24,131 @@
 <body>
 
   <!-- ══════════════════════════════════════════════
+       SVG SPRITE — definiciones de íconos reutilizables
+  ══════════════════════════════════════════════════ -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+    <!-- Estrella (reseñas) -->
+    <symbol id="icon-star" viewBox="0 0 20 20">
+      <polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/>
+    </symbol>
+
+    <!-- Ancla / Del barco al plato -->
+    <symbol id="icon-anchor" viewBox="0 0 24 24">
+      <circle cx="12" cy="5" r="2"/>
+      <path d="M12 7v10M5 12c0 4 3.5 7 7 7s7-3 7-7"/>
+      <path d="M5 12H2m20 0h-3"/>
+    </symbol>
+
+    <!-- Palillos cruzados / Fusión sin forzar -->
+    <symbol id="icon-fusion" viewBox="0 0 24 24">
+      <path d="M8 3L6 21M16 3L18 21"/>
+      <path d="M6 8h12M6 16h12"/>
+    </symbol>
+
+    <!-- Hoja de palma / Ambiente -->
+    <symbol id="icon-palm-leaf" viewBox="0 0 24 24">
+      <path d="M12 22V12"/>
+      <path d="M12 12C10 8 6 6 3 8c3-1 6 2 9 4"/>
+      <path d="M12 12c2-4 6-6 9-4-3-1-6 2-9 4"/>
+      <path d="M12 8c0-3 2-6 4-7-2 1-3 4-4 7"/>
+    </symbol>
+
+    <!-- Ola / Tab Mariscos -->
+    <symbol id="icon-wave" viewBox="0 0 24 24">
+      <path d="M2 12 C5 8 8 16 12 12 C16 8 19 16 22 12"/>
+    </symbol>
+
+    <!-- Palillos paralelos / Tab Sushi -->
+    <symbol id="icon-chopsticks" viewBox="0 0 24 24">
+      <line x1="8" y1="3" x2="7" y2="21"/>
+      <line x1="16" y1="3" x2="17" y2="21"/>
+    </symbol>
+
+    <!-- Estrella contorno / Tab Especialidades -->
+    <symbol id="icon-star-outline" viewBox="0 0 24 24">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+
+    <!-- Taza / Tab Bebidas -->
+    <symbol id="icon-cup" viewBox="0 0 24 24">
+      <path d="M17 8h2a2 2 0 1 1 0 4h-2"/>
+      <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+      <line x1="6" x2="6" y1="2" y2="4"/>
+      <line x1="10" x2="10" y1="2" y2="4"/>
+      <line x1="14" x2="14" y1="2" y2="4"/>
+    </symbol>
+
+    <!-- Cubiertos / Entradas -->
+    <symbol id="icon-utensils" viewBox="0 0 24 24">
+      <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+      <path d="M7 2v20"/>
+      <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3"/>
+      <path d="M21 15v7"/>
+    </symbol>
+
+    <!-- Llama / Caliente -->
+    <symbol id="icon-flame" viewBox="0 0 24 24">
+      <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+    </symbol>
+
+    <!-- Tazón / Rice -->
+    <symbol id="icon-bowl" viewBox="0 0 24 24">
+      <path d="M2 13h20"/>
+      <path d="M5 13c0 3.9 3.1 7 7 7s7-3.1 7-7"/>
+      <path d="M9 5c0 2-1 3-1 5M15 5c0 2 1 3 1 5"/>
+    </symbol>
+
+    <!-- Carita / Kids -->
+    <symbol id="icon-smile" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+      <line x1="9" y1="9" x2="9.01" y2="9"/>
+      <line x1="15" y1="9" x2="15.01" y2="9"/>
+    </symbol>
+
+    <!-- Charola / Tray -->
+    <symbol id="icon-tray" viewBox="0 0 24 24">
+      <rect x="3" y="13" width="18" height="4" rx="1"/>
+      <path d="M6 13V9a6 4 0 0 1 12 0v4"/>
+      <path d="M9 17v2M15 17v2"/>
+    </symbol>
+
+    <!-- Chevron izquierda / Reseñas anterior -->
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+      <polyline points="15 18 9 12 15 6"/>
+    </symbol>
+
+    <!-- Chevron derecha / Reseñas siguiente -->
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+      <polyline points="9 18 15 12 9 6"/>
+    </symbol>
+
+    <!-- Chevron arriba / Volver arriba -->
+    <symbol id="icon-chevron-up" viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15"/>
+    </symbol>
+
+    <!-- Pin / Dirección -->
+    <symbol id="icon-location" viewBox="0 0 24 24">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+
+    <!-- Teléfono -->
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+
+    <!-- Reloj / Horario -->
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </symbol>
+
+  </svg>
+
+  <!-- ══════════════════════════════════════════════
        PRELOADER
   ══════════════════════════════════════════════════ -->
   <div id="preloader" role="status" aria-label="Cargando El Palmar" aria-live="polite">
@@ -190,7 +315,7 @@
     <!-- ════════════════════════════════════════════
          ABOUT
     ════════════════════════════════════════════════ -->
-    <section id="nosotros" class="about section" aria-labelledby="about-title">
+    <section id="nosotros" class="about section" aria-labelledby="about-title" data-cursor="light">
       <div class="container">
 
         <!-- Two-column -->
@@ -240,12 +365,7 @@
           <!-- Card 1 -->
           <article class="feature-card animate-fade-up delay-1">
             <div class="feature-card__icon" aria-hidden="true">
-              <!-- Anchor / Boat icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="5" r="2"/>
-                <path d="M12 7v10M5 12c0 4 3.5 7 7 7s7-3 7-7"/>
-                <path d="M5 12H2m20 0h-3"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor"></use></svg>
             </div>
             <h3 data-i18n="about.f1.title">Del barco al plato</h3>
             <p data-i18n="about.f1.body">Trabajamos directamente con pescadores locales. Sin intermediarios, sin frigoríficos de por medio. El producto llega fresco cada mañana.</p>
@@ -254,11 +374,7 @@
           <!-- Card 2 -->
           <article class="feature-card animate-fade-up delay-3">
             <div class="feature-card__icon" aria-hidden="true">
-              <!-- Chopsticks / fusion icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 3L6 21M16 3L18 21"/>
-                <path d="M6 8h12M6 16h12"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-fusion"></use></svg>
             </div>
             <h3 data-i18n="about.f2.title">Fusión sin forzar</h3>
             <p data-i18n="about.f2.body">No mezclamos por moda. Mezclamos porque el camarón sinaloense y el arroz de sushi nacieron para encontrarse.</p>
@@ -267,13 +383,7 @@
           <!-- Card 3 -->
           <article class="feature-card animate-fade-up delay-5">
             <div class="feature-card__icon" aria-hidden="true">
-              <!-- Palm / atmosphere icon -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22V12"/>
-                <path d="M12 12C10 8 6 6 3 8c3-1 6 2 9 4"/>
-                <path d="M12 12c2-4 6-6 9-4-3-1-6 2-9 4"/>
-                <path d="M12 8c0-3 2-6 4-7-2 1-3 4-4 7"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-palm-leaf"></use></svg>
             </div>
             <h3 data-i18n="about.f3.title">Ambiente que acompaña</h3>
             <p data-i18n="about.f3.body">La palapa, la brisa y el rumor del mar de fondo. Un lugar donde el tiempo corre a otra velocidad.</p>
@@ -304,304 +414,1338 @@
 
         <!-- Tabs -->
         <div class="menu__tabs" role="tablist" aria-label="Categorías del menú">
-          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-mariscos" id="tab-mariscos" data-tab="mariscos">
-            <!-- Wave icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-              <path d="M2 12 C5 8 8 16 12 12 C16 8 19 16 22 12"/>
-            </svg>
-            <span data-i18n="menu.tab1">Mariscos</span>
+
+          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-entradas" id="tab-entradas" data-tab="entradas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-utensils"></use></svg>
+            <span data-i18n="menu.tab1">Entradas</span>
           </button>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-seafood" id="tab-seafood" data-tab="seafood">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-wave"></use></svg>
+            <span data-i18n="menu.tab2">Seafood</span>
+          </button>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-caliente" id="tab-caliente" data-tab="caliente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-flame"></use></svg>
+            <span data-i18n="menu.tab3">Caliente</span>
+          </button>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-appetizers" id="tab-appetizers" data-tab="appetizers">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-fusion"></use></svg>
+            <span data-i18n="menu.tab4">Appetizers</span>
+          </button>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-rice" id="tab-rice" data-tab="rice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-bowl"></use></svg>
+            <span data-i18n="menu.tab5">Arroz</span>
+          </button>
+
           <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-sushi" id="tab-sushi" data-tab="sushi">
-            <!-- Chopsticks icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-              <line x1="8" y1="3" x2="7" y2="21"/>
-              <line x1="16" y1="3" x2="17" y2="21"/>
-            </svg>
-            <span data-i18n="menu.tab2">Sushi</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-chopsticks"></use></svg>
+            <span data-i18n="menu.tab6">Sushi</span>
           </button>
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-especialidades" id="tab-especialidades" data-tab="especialidades">
-            <!-- Star icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-            <span data-i18n="menu.tab3">Especialidades</span>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-kids" id="tab-kids" data-tab="kids">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-smile"></use></svg>
+            <span data-i18n="menu.tab7">Kids</span>
           </button>
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-bebidas" id="tab-bebidas" data-tab="bebidas">
-            <!-- Cup icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-              <path d="M17 8h2a2 2 0 1 1 0 4h-2"/>
-              <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
-              <line x1="6" x2="6" y1="2" y2="4"/>
-              <line x1="10" x2="10" y1="2" y2="4"/>
-              <line x1="14" x2="14" y1="2" y2="4"/>
-            </svg>
-            <span data-i18n="menu.tab4">Bebidas</span>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks" data-tab="drinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-cup"></use></svg>
+            <span data-i18n="menu.tab8">Bebidas</span>
           </button>
+
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-charola" id="tab-charola" data-tab="charola">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
+            <span data-i18n="menu.tab9">Charola</span>
+          </button>
+
         </div>
 
-        <!-- Panel: Mariscos -->
-        <div id="panel-mariscos" class="menu__panel is-active" role="tabpanel" aria-labelledby="tab-mariscos">
+        <!-- Panel: Entradas -->
+        <div id="panel-entradas" class="menu__panel is-active" role="tabpanel" aria-labelledby="tab-entradas">
           <div class="menu__grid">
 
+            <!-- Campechana especial -->
             <article class="menu-card">
               <div class="menu-card__img" aria-hidden="true">
-                <!-- Shell / seafood illustration -->
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M32 8 C18 8 8 18 8 32 C8 46 18 56 32 56 C46 56 56 46 56 32 C56 18 46 8 32 8 Z" stroke-dasharray="3 2" opacity="0.5"/>
-                  <path d="M32 16 C22 16 16 22 16 32 C16 42 22 48 32 48 C42 48 48 42 48 32"/>
-                  <path d="M32 16 L32 48 M22 22 L42 42 M22 42 L42 22"/>
+                  <path d="M16 22h32l-4 24H20z" opacity="0.3"/>
+                  <path d="M16 22h32l-4 24H20z"/>
+                  <path d="M20 34 C24 28 40 28 44 34" opacity="0.7"/>
+                  <circle cx="26" cy="30" r="3" opacity="0.6"/>
+                  <circle cx="38" cy="28" r="4" opacity="0.6"/>
+                  <path d="M32 46v5M26 51h12"/>
                 </svg>
               </div>
               <div class="menu-card__body">
                 <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Entrada</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                  <span class="menu-card__tag" data-i18n="menu.tag.especial">Especial</span>
                 </div>
-                <h3 class="menu-card__name">Ceviche de Camarón</h3>
-                <p class="menu-card__desc">Camarón fresco del Pacífico, limón sinaloense, chile serrano y pepino. El mar en estado puro.</p>
+                <h3 class="menu-card__name" data-i18n="menu.e1.name">Campechana</h3>
+                <p class="menu-card__desc" data-i18n="menu.e1.desc">Cóctel de camarón chico, camarón pasado, pulpo, caracol, pepino y cebolla morada.</p>
                 <div class="menu-card__footer">
-                  <span class="menu-card__price">$145</span>
+                  <span class="menu-card__price">$270</span>
                 </div>
               </div>
             </article>
 
+            <!-- Coctel de Camarón -->
             <article class="menu-card">
               <div class="menu-card__img" aria-hidden="true">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <ellipse cx="32" cy="32" rx="20" ry="14" opacity="0.5"/>
-                  <path d="M12 32 C12 20 20 14 32 14 C44 14 52 20 52 32"/>
-                  <path d="M20 28 C20 24 24 22 32 22 C40 22 44 24 44 28"/>
-                  <circle cx="32" cy="34" r="6"/>
+                  <path d="M18 20h28l-2 28H20z" opacity="0.3"/>
+                  <path d="M18 20h28l-2 28H20z"/>
+                  <path d="M22 32 C26 24 38 24 42 32" opacity="0.7"/>
+                  <circle cx="29" cy="27" r="3.5" opacity="0.55"/>
+                  <circle cx="40" cy="26" r="3" opacity="0.55"/>
                 </svg>
               </div>
               <div class="menu-card__body">
                 <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Fuerte</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                  <span class="menu-card__tag" data-i18n="menu.tag.coctel">Cóctel</span>
                 </div>
-                <h3 class="menu-card__name">Aguachile Negro</h3>
-                <p class="menu-card__desc">Camarón marinado en salsa negra de chile morita y limón. Picante, oscuro y elegante.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$195</span>
+                <h3 class="menu-card__name" data-i18n="menu.e2.name">Coctel de Camarón</h3>
+                <p class="menu-card__desc" data-i18n="menu.e2.desc">Camarón fresco marinado en limón con pepino y cebolla morada.</p>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.ch">Chico</span>
+                    <span class="menu-card__price">$120</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$280</span>
+                  </div>
                 </div>
               </div>
             </article>
 
+            <!-- Coctel de Pulpo -->
             <article class="menu-card">
               <div class="menu-card__img" aria-hidden="true">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M10 40 C10 28 18 20 32 18 C46 20 54 28 54 40 L54 46 L10 46 Z" opacity="0.5"/>
-                  <path d="M10 40 C18 36 28 38 32 36 C36 38 46 36 54 40"/>
-                  <circle cx="24" cy="32" r="4"/>
-                  <circle cx="40" cy="30" r="5"/>
-                  <circle cx="32" cy="35" r="3"/>
+                  <path d="M18 20h28l-2 28H20z" opacity="0.3"/>
+                  <path d="M18 20h28l-2 28H20z"/>
+                  <path d="M20 36 C22 28 42 28 44 36" opacity="0.6"/>
+                  <path d="M24 42 C24 46 28 46 28 42 C28 46 32 46 32 42 C32 46 36 46 36 42 C36 46 40 46 40 42" opacity="0.5"/>
+                  <circle cx="32" cy="30" r="5" opacity="0.6"/>
                 </svg>
               </div>
               <div class="menu-card__body">
                 <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Sopa</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                  <span class="menu-card__tag" data-i18n="menu.tag.coctel">Cóctel</span>
                 </div>
-                <h3 class="menu-card__name">Caldo de Camarón</h3>
-                <p class="menu-card__desc">El caldo que antecede todo buen banquete. Receta de la abuela con jitomate asado y epazote.</p>
+                <h3 class="menu-card__name" data-i18n="menu.e3.name">Coctel de Pulpo</h3>
+                <p class="menu-card__desc" data-i18n="menu.e3.desc">Pulpo tierno en su jugo con limón, cebolla y verduras frescas.</p>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.ch">Chico</span>
+                    <span class="menu-card__price">$200</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$300</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Coctel Campechana (variantes) -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 22h32l-4 24H20z" opacity="0.3"/>
+                  <path d="M16 22h32l-4 24H20z"/>
+                  <circle cx="25" cy="30" r="3" opacity="0.5"/>
+                  <circle cx="35" cy="27" r="4" opacity="0.5"/>
+                  <circle cx="42" cy="32" r="3.5" opacity="0.5"/>
+                  <path d="M32 46v5M26 51h12"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.coctel">Cóctel</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e4.name">Coctel Campechana</h3>
+                <p class="menu-card__desc" data-i18n="menu.e4.desc">Aguachile · Camarón Coco · Pasado (aparte).</p>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.ch">Chico</span>
+                    <span class="menu-card__price">$200</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$280</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Jaba Omelette -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="32" cy="40" rx="24" ry="14" opacity="0.3"/>
+                  <ellipse cx="32" cy="40" rx="24" ry="14"/>
+                  <path d="M10 37 C14 27 50 27 54 37"/>
+                  <circle cx="25" cy="35" r="5" opacity="0.55"/>
+                  <circle cx="40" cy="33" r="6" opacity="0.55"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.entrada">Entrada</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e5.name">Jaba Omelette</h3>
+                <p class="menu-card__desc" data-i18n="menu.e5.desc">Omelette de jaiba marinada servido con salsa de la casa.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$280</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tostada de Maíz -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="32" cy="38" rx="22" ry="7" opacity="0.3"/>
+                  <ellipse cx="32" cy="38" rx="22" ry="7"/>
+                  <ellipse cx="32" cy="34" rx="16" ry="6" opacity="0.6"/>
+                  <path d="M18 32 C20 24 44 24 46 32"/>
+                  <circle cx="27" cy="29" r="2.5" opacity="0.5"/>
+                  <circle cx="37" cy="27" r="3" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.entrada">Entrada</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e6.name">Tostada de Maíz</h3>
+                <p class="menu-card__desc" data-i18n="menu.e6.desc">Tostada artesanal de maíz con mariscos y salsas de la casa.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$130</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Taco de Camarón -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 50 C14 30 50 30 50 50" opacity="0.3"/>
+                  <path d="M14 50 C14 30 50 30 50 50"/>
+                  <path d="M18 38 C22 28 42 28 46 38"/>
+                  <circle cx="26" cy="42" r="4" opacity="0.55"/>
+                  <circle cx="37" cy="40" r="5" opacity="0.5"/>
+                  <circle cx="30" cy="47" r="3" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.taco">Taco</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e7.name">Taco de Camarón</h3>
+                <p class="menu-card__desc" data-i18n="menu.e7.desc">Camarón grande en tortilla de maíz con salsas de la casa.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$180</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Taco de Marlín -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 50 C12 32 52 32 52 50" opacity="0.3"/>
+                  <path d="M12 50 C12 32 52 32 52 50"/>
+                  <path d="M16 39 C20 29 44 29 48 39"/>
+                  <path d="M24 44 C26 38 38 38 40 44" opacity="0.6"/>
+                  <circle cx="32" cy="43" r="4" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.taco">Taco</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e8.name">Taco de Marlín</h3>
+                <p class="menu-card__desc" data-i18n="menu.e8.desc">Marlín ahumado en tortilla de maíz con verduras y salsa.</p>
                 <div class="menu-card__footer">
                   <span class="menu-card__price">$120</span>
                 </div>
               </div>
             </article>
 
+            <!-- Torre de Palmar -->
             <article class="menu-card">
               <div class="menu-card__img" aria-hidden="true">
                 <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="14" y="28" width="36" height="18" rx="4" opacity="0.5"/>
-                  <path d="M14 36 C22 32 30 38 38 34 C44 31 52 35 50 36"/>
-                  <path d="M18 28 C20 20 28 16 32 16 C36 16 44 20 46 28"/>
+                  <ellipse cx="32" cy="50" rx="16" ry="4" opacity="0.3"/>
+                  <ellipse cx="32" cy="42" rx="13" ry="3.5" opacity="0.45"/>
+                  <ellipse cx="32" cy="34" rx="11" ry="3.5" opacity="0.55"/>
+                  <ellipse cx="32" cy="26" rx="9" ry="3" opacity="0.7"/>
+                  <ellipse cx="32" cy="19" rx="7" ry="3" opacity="0.85"/>
+                  <line x1="32" y1="16" x2="32" y2="11" stroke-width="2"/>
                 </svg>
               </div>
               <div class="menu-card__body">
                 <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Fuerte</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                  <span class="menu-card__tag" data-i18n="menu.tag.especial">Especial</span>
                 </div>
-                <h3 class="menu-card__name">Tiradito de Camarón</h3>
-                <p class="menu-card__desc">Corte en láminas delgadas, aderezo cítrico con aceite de ajonjolí y toques de jengibre fresco.</p>
+                <h3 class="menu-card__name" data-i18n="menu.e9.name">Torre de Palmar</h3>
+                <p class="menu-card__desc" data-i18n="menu.e9.desc">Camarón crudo y cocido, pulpo asado, camarón frito, salsa de la casa y salsa piña-habanero con pepino.</p>
                 <div class="menu-card__footer">
-                  <span class="menu-card__price">$175</span>
+                  <span class="menu-card__price">$345</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Molcajete Palmar -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 36 C14 50 50 50 50 36" opacity="0.3"/>
+                  <path d="M14 36 C14 22 50 22 50 36"/>
+                  <ellipse cx="32" cy="22" rx="18" ry="6"/>
+                  <path d="M20 32 C22 40 42 40 44 32" opacity="0.55"/>
+                  <line x1="22" y1="48" x2="20" y2="56"/>
+                  <line x1="32" y1="50" x2="32" y2="58"/>
+                  <line x1="42" y1="48" x2="44" y2="56"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.especial">Especial</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.e10.name">Molcajete Palmar</h3>
+                <p class="menu-card__desc" data-i18n="menu.e10.desc">Aguacate con almeja, camarón crudo y cocido, pulpo, cilantro y salsas de la casa.</p>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$345</span>
                 </div>
               </div>
             </article>
 
           </div>
+        </div>
+
+        <!-- Panel: Seafood -->
+        <div id="panel-seafood" class="menu__panel" role="tabpanel" aria-labelledby="tab-seafood">
+
+          <!-- ─── Ceviches ─────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.sf.sub1">Ceviches</h3>
+
+          <div class="menu__list">
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf1.name">El Vale</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf1.desc">Ceviche de pescado y camarón, cebolla morada en salsa estilo El Palmar.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf2.name">Limeto</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf2.desc">Camarón crudo con una coctelera de sopa de pata de mula.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf3.name">Sinaloense</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf3.desc">Camarón crudo, pepino, cebolla morada, chile serrano y aguacate.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf4.name">Sierra Natural</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf4.desc">Sierra fresca natural con cebolla, pepino y limón.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf5.name">Sierra Cevichada</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf5.desc">Sierra cevichada con pepino, cebolla morada y cilantro.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf6.name">Sierra Campechana</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf6.desc">Sierra con camarón, pulpo, cebolla morada y verduras frescas.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf7.name">Tres Huertos</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf7.desc">Pepino, chile serrano y verduras frescas de temporada.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$100</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf8.name">San Blas</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf8.desc">Ceviche con una coctelera de sopa de pata de mula.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$105</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf9.name">Acapulcada</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf9.desc">Camarón crudo y cocido con salsa estilo Acapulco.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$105</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf10.name">San Carlos</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf10.desc">Camarón crudo, camarón pasado, cebolla morada y pepino.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$105</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf11.name">Japonés</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf11.desc">Ceviche con soya y el toque japonés del palmar.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$105</span>
+              </div>
+            </div>
+
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sf12.name">Ceviche Mixto</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sf12.desc">Mezcla de mariscos frescos con verduras de temporada.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Tostada</span>$105</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ─── Aguachiles & Sashimis ────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.sf.sub2">Aguachiles &amp; Sashimis</h3>
+
+          <div class="menu__grid">
+
+            <!-- Aguachiles (all flavors, same price) -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="32" cy="38" rx="22" ry="14" opacity="0.4"/>
+                  <path d="M10 38 C10 26 22 18 32 18 C42 18 54 26 54 38"/>
+                  <path d="M18 34 C22 28 42 28 46 34"/>
+                  <circle cx="26" cy="32" r="3" opacity="0.6"/>
+                  <circle cx="38" cy="30" r="4" opacity="0.6"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag" data-i18n="menu.tag.aguachile">Aguachile</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.sf13.name">Aguachiles</h3>
+                <p class="menu-card__desc" data-i18n="menu.sf13.desc">Camarón crudo, pepino, cebolla morada. Elige tu salsa.</p>
+                <div class="menu-card__flavors">
+                  <span class="menu-card__flavor">Tradicional</span>
+                  <span class="menu-card__flavor">Morita</span>
+                  <span class="menu-card__flavor">Aceite</span>
+                  <span class="menu-card__flavor">Chicha</span>
+                  <span class="menu-card__flavor">Negro</span>
+                  <span class="menu-card__flavor">Palmar</span>
+                </div>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$280</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label">Tostada</span>
+                    <span class="menu-card__price">$160</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Sashimi Atún -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="14" y="24" width="36" height="20" rx="4" opacity="0.4"/>
+                  <path d="M14 34 C22 30 30 38 38 32 C44 28 52 34 50 36"/>
+                  <path d="M18 24 C20 16 28 12 32 12 C36 12 44 16 46 24"/>
+                  <line x1="22" y1="28" x2="42" y2="28" opacity="0.3"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Sashimi</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.sf14.name">Sashimi Atún</h3>
+                <p class="menu-card__desc" data-i18n="menu.sf14.desc">Láminas de atún, cebollín, shishimi, soya con el toque japonés del palmar.</p>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$270</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label">Tostada</span>
+                    <span class="menu-card__price">$155</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Sashimi de Marlín Ahumado en Frío -->
+            <article class="menu-card">
+              <div class="menu-card__img" aria-hidden="true">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="14" y="24" width="36" height="20" rx="4" opacity="0.4"/>
+                  <path d="M14 34 C22 30 30 38 38 32 C44 28 52 34 50 36"/>
+                  <path d="M18 24 C20 16 28 12 32 12 C36 12 44 16 46 24"/>
+                  <path d="M24 18 C24 14 28 14 28 18" opacity="0.4"/>
+                  <path d="M36 18 C36 14 40 14 40 18" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="menu-card__body">
+                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
+                  <span class="menu-card__tag">Sashimi</span>
+                </div>
+                <h3 class="menu-card__name" data-i18n="menu.sf15.name">Sashimi de Marlín Ahumado en Frío</h3>
+                <p class="menu-card__desc" data-i18n="menu.sf15.desc">Láminas de marlín fresco, cebollín, shishimi, soya con el toque japonés del palmar.</p>
+                <div class="menu-card__sizes">
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label" data-i18n="menu.size.gde">Grande</span>
+                    <span class="menu-card__price">$270</span>
+                  </div>
+                  <div class="menu-card__size-row">
+                    <span class="menu-card__size-label">Tostada</span>
+                    <span class="menu-card__price">$155</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Caliente -->
+        <div id="panel-caliente" class="menu__panel" role="tabpanel" aria-labelledby="tab-caliente">
+
+          <!-- ── Tacos ──────────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.c.sub1">Tacos</h3>
+
+          <div class="menu__list">
+            <!-- Tacos Gobernador Camarón -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c1.name">Tacos Gobernador Camarón</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c1.desc">Orden de 3, con nuestra receta especial, y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$260</span>
+              </div>
+            </div>
+            <!-- Tacos Gobernador Marlín -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c2.name">Tacos Gobernador Marlín</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c2.desc">Orden de 3, con nuestra receta especial, y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$240</span>
+              </div>
+            </div>
+            <!-- Taco Morita -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c3.name">Taco Morita</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c3.desc">De camarón, pulpo o mixto con toque de nuestra salsa morita, servido con lechuga, cebolla encurtida y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$120</span>
+              </div>
+            </div>
+            <!-- Taco Zarandeado -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c4.name">Taco Zarandeado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c4.desc">De camarón, pulpo o mixto con nuestra salsa zarandeada, servido con lechuga, cebolla encurtida y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$120</span>
+              </div>
+            </div>
+            <!-- Tacos Dorados de Camarón -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c5.name">Tacos Dorados de Camarón</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c5.desc">Orden de 3, como en la cenaduría, servido con lechuga, zanahoria, cebolla encurtida y nuestro caldo de camarón.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$260</span>
+              </div>
+            </div>
+            <!-- Chorreada El Palmar -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c6.name">Chorreada El Palmar</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c6.desc">La tradicional chorreada mazatleca, gordita con asiento, queso, camarón y pulpo marinados con nuestro aderezo, coronado con lechuga, cebolla encurtida y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$175</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Lo Caliente del Palmar ─────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.c.sub2">Lo Caliente del Palmar</h3>
+
+          <div class="menu__list">
+            <!-- Camarón / Atún Fresado -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c7.name">Camarón / Atún Fresado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c7.desc">200 gramos de exquisito cajún de atún y piezas del día marinados con nuestra receta, lechuga, tomate, frijol refrito y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$160</span>
+              </div>
+            </div>
+            <!-- Hamburguesa El Palmar -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c8.name">Hamburguesa El Palmar</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c8.desc">Jugosa res o camarón empanizado, queso gouda, lechuga, tomate, cebolla asada, aderezo de chipotle, acompañada de papas fritas a la francesa.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$195</span>
+              </div>
+            </div>
+            <!-- Alitas de Pollo BBQ -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c9.name">Alitas de Pollo BBQ</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c9.desc">Preparadas al horno con salsa de alcachofa y escabeche, queso, crema y nuestro caldo de camarón.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$175</span>
+              </div>
+            </div>
+            <!-- Pescado -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c10.name">Pescado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c10.desc">Empanizado o zarandeado (filete).</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.ch">Chico</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$300</span>
+              </div>
+            </div>
+            <!-- Pulpo Zarandeado -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c11.name">Pulpo Zarandeado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c11.desc">Pulpo a las brasas con salsa zarandeada de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$300</span>
+              </div>
+            </div>
+            <!-- Camarón a la Diabla -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c12.name">Camarón a la Diabla</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c12.desc">Camarones en salsa de chile de árbol con el toque del Palmar.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$200</span>
+              </div>
+            </div>
+            <!-- Mariscada -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c13.name">Mariscada</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c13.desc">Mezcla de mariscos frescos a la plancha con verduras.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.ch">Chico</span>$200</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.size.gde">Grande</span>$300</span>
+              </div>
+            </div>
+            <!-- Camarones Empanizados -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c14.name">Camarones Empanizados</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c14.desc">Camarones crujientes empanizados, servidos con guarnición.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$170</span>
+              </div>
+            </div>
+            <!-- Camarones al Coco -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c15.name">Camarones al Coco</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c15.desc">Camarones empanizados con coco rallado, servidos con guarnición.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$180</span>
+              </div>
+            </div>
+            <!-- Camarones Roca -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c16.name">Camarones Roca</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c16.desc">Camarones estilo roca con nuestra salsa especial.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$200</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Panel: Appetizers -->
+        <div id="panel-appetizers" class="menu__panel" role="tabpanel" aria-labelledby="tab-appetizers">
+
+          <!-- ── Entradas del Sushi ─────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.a.sub1">Entradas</h3>
+
+          <div class="menu__list">
+            <!-- Kushiage -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a1.name">Kushiage (2 pz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a1.desc">Las tradicionales brochetas empanizadas con un aderezo especial y salsa cítrica.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.queso">Queso</span>$60</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.platqueso">Plát. y Queso</span>$80</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.camaron">Camarón</span>$120</span>
+              </div>
+            </div>
+            <!-- Gyoza -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a2.name">Gyoza (4 pz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a2.desc">Rollos rellenos de pasta de cangrejo, bañados en salsa de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$80</span>
+              </div>
+            </div>
+            <!-- Camarones YO -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a3.name">Camarones YO (4 pz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a3.desc">Camarones preparados al estilo de la casa con salsa especial.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$80</span>
+              </div>
+            </div>
+            <!-- Cevichaca de Atún -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a4.name">Cevichaca de Atún (8 pz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a4.desc">Láminas de atún rellenas de kanikama, bañadas en salsa de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$80</span>
+              </div>
+            </div>
+            <!-- Concha Ahí -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a5.name">Concha Ahí</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a5.desc">Concha rellena de atún ahí con aderezo especial del Palmar.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$170</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Teriyaki ───────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.a.sub2">Teriyaki</h3>
+
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.a6.name">Teriyaki</p>
+                <p class="menu-list-item__desc" data-i18n="menu.a6.desc">Brócoli, pimientos, cebolla y zanahorias salteadas con salsa de soya y teriyaki.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.pollo">Pollo</span>$120</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.res">Res</span>$160</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.camaron">Camarón</span>$180</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Panel: Rice -->
+        <div id="panel-rice" class="menu__panel" role="tabpanel" aria-labelledby="tab-rice">
+
+          <div class="menu__list">
+            <!-- Tuna Tower -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.r1.name">Tuna Tower</p>
+                <p class="menu-list-item__desc" data-i18n="menu.r1.desc">Torre de arroz, aguacate, pasta de cangrejo, masago y delicioso spicy de atún fresco, bañada con aderezo de la casa, salsa de arúgula y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$220</span>
+              </div>
+            </div>
+            <!-- Yakimeshi Supreme -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.r2.name">Yakimeshi Supreme</p>
+                <p class="menu-list-item__desc" data-i18n="menu.r2.desc">Arroz frito con verduras e ingrediente a elegir (pollo, res o camarón) y trocitos de camarón crujiente, ensalada de arúgula y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$195</span>
+              </div>
+            </div>
+            <!-- Yakimeshi Especial -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.r3.name">Yakimeshi Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.r3.desc">Arroz frito con verduras e ingrediente a elegir (pollo, res o camarón), tampico, aguacate y topping philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$180</span>
+              </div>
+            </div>
+            <!-- Yakimeshi -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.r4.name">Yakimeshi</p>
+                <p class="menu-list-item__desc" data-i18n="menu.r4.desc">Exquisito arroz frito con verduras e ingrediente a elegir (pollo, res o camarón).</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$150</span>
+              </div>
+            </div>
+            <!-- Gohan Especial -->
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.r5.name">Gohan Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.r5.desc">Arroz al vapor con un ingrediente a elegir (pollo, res o camarón).</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price">$150</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Panel: Sushi -->
         <div id="panel-sushi" class="menu__panel" role="tabpanel" aria-labelledby="tab-sushi">
-          <div class="menu__grid">
 
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="32" cy="32" r="18" opacity="0.4"/>
-                  <circle cx="32" cy="32" r="11"/>
-                  <circle cx="32" cy="32" r="5"/>
-                  <path d="M32 14 L32 18 M32 46 L32 50 M14 32 L18 32 M46 32 L50 32"/>
-                </svg>
+          <!-- ── Rollos Naturales ────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.su.sub1">Rollos Naturales</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn1.name">California Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn1.desc">Camaron, aguacate, pepino y philadelphia.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Roll</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Roll Pacífico</h3>
-                <p class="menu-card__desc">Atún del Pacífico, aguacate crema y arroz al vinagre. Una ola en un bocado.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$185</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$145</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn2.name">California Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn2.desc">Masago por fuera, camaron, aguacate, pepino y philadelphia por dentro.</p>
               </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="16" y="22" width="32" height="20" rx="10" opacity="0.4"/>
-                  <path d="M24 32 C24 26 40 26 40 32"/>
-                  <ellipse cx="32" cy="36" rx="10" ry="6"/>
-                  <path d="M26 28 L38 28"/>
-                </svg>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn3.name">Avocado Maki</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn3.desc">Aguacate por fuera, camaron, pepino y philadelphia por dentro.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Roll</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Roll de Camarón Bañado</h3>
-                <p class="menu-card__desc">Camarón sinaloense rebozado, cubierto con salsa ponzu y chile de árbol tostado.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$195</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn4.name">Philadelphia Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn4.desc">Philadelphia por fuera, camaron, aguacate, pepino y philadelphia por dentro.</p>
               </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20 44 L20 24 L44 24 L44 44 Z" opacity="0.4"/>
-                  <path d="M26 24 C26 18 38 18 38 24"/>
-                  <path d="M20 32 L44 32"/>
-                  <circle cx="32" cy="28" r="3"/>
-                </svg>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$90</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn5.name">Yu Maki</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn5.desc">Alga por fuera, pasta maki, aguacate, pepino y philadelphia por dentro.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Nigiri</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Nigiri Tataki</h3>
-                <p class="menu-card__desc">Atún sellado al fuego sobre colchón de arroz. Wasabi fresco, cebollín y salsa ponzu.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$220</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$90</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn6.name">Beach Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn6.desc">Masago por fuera, camaron, atun, aguacate, pepino y philadelphia por dentro, bañado con salsa de anguila y ajonjoli.</p>
               </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <ellipse cx="32" cy="38" rx="20" ry="12" opacity="0.4"/>
-                  <path d="M12 38 C12 30 20 24 32 24 C44 24 52 30 52 38"/>
-                  <circle cx="32" cy="28" r="8"/>
-                  <path d="M28 26 L36 30 L28 32"/>
-                </svg>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$160</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn7.name">Ninja Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn7.desc">Fresco rollo envuelto en hoja de pepino, por dentro kanikama, masago, aguacate y philadelphia.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Roll</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Dragon Roll</h3>
-                <p class="menu-card__desc">Camarón tempura cubierto con láminas de aguacate, salsa de mango y chile habanero.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$215</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$135</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sn8.name">Eby Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sn8.desc">Camarón, aguacate y mango.</p>
               </div>
-            </article>
-
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$135</span></div>
+            </div>
           </div>
+
+          <!-- ── Rollos Empanizados ─────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.su.sub2">Rollos Empanizados</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se1.name">Tempura Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se1.desc">Camarón, aguacate y philadelphia por dentro con topping tampico.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$195</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se2.name">Mar y Tierra</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se2.desc">Camarón, res, aguacate y philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$160</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se3.name">Favorito Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se3.desc">Por dentro cangrejo, aguacate y philadelphia, encima pasta maki, finas rajas de aguacate, bañado con salsa de arúgula y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$165</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se4.name">Tres Quesos</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se4.desc">Por fuera queso philadelphia y croqueta, por dentro camarón, aguacate y philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$165</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se5.name">Camarón Blue</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se5.desc">Por fuera queso manchego, por dentro camarón, tocino, aguacate y philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$175</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.se6.name">Cordón Blue</p>
+                <p class="menu-list-item__desc" data-i18n="menu.se6.desc">Por fuera queso manchego, por dentro pollo, tocino, aguacate y philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$175</span></div>
+            </div>
+          </div>
+
+          <!-- ── Rollos Especiales ──────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.su.sub3">Rollos Especiales</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp1.name">Sin Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp1.desc">Pieza doble envuelta en alga de soya, por dentro salmón, atún, mango, pepino y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp2.name">Aqua Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp2.desc">Exquisito rollo envuelto en alga de soya, por dentro salmón, atún y camarón.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp3.name">Furia Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp3.desc">Pieza doble envuelta en alga, por dentro camarón, aguacate y salsa picante.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp4.name">Spicy Camarón</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp4.desc">Cangrejo, aguacate y philadelphia por dentro, con topping extra de camarones encima.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp5.name">Eros</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp5.desc">Camarón, aguacate, pepino y philadelphia por dentro, con topping especial.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp6.name">Café Calle</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp6.desc">Camarón, aguacate y philadelphia por dentro, con salsa especial de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$200</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp7.name">Tinta Especial (con arroz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp7.desc">Pieza doble envuelta en alga, por dentro aguacate, camarón y cangrejo, con mango y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$215</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp8.name">No Name Roll (con arroz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp8.desc">Pieza doble, maki, camarón, masago y topping especial del Palmar.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$270</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp9.name">Camarón Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp9.desc">Camarón empanizado en alga natural, con delicioso spicy de camarón.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp10.name">Pro Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp10.desc">Por dentro aguacate, camarón y philadelphia, con topping premium.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$260</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp11.name">Bonair Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp11.desc">En alga con camarón por dentro, topping especial de camarón tempura.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp12.name">Pro Especial</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp12.desc">Aguacate, pepino y philadelphia por dentro, bañado con salsa de arúgula y ajonjolí.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$260</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp13.name">Diamondlite Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp13.desc">Pieza doble envuelta en alga, por dentro camarón, aguacate y topping especial.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp14.name">Kenny Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp14.desc">Camarón, aguacate y philadelphia por dentro, con topping de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sp15.name">Citrus Roll (sin arroz)</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sp15.desc">Camarón, aguacate y cítricos, envuelto en alga de soya.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+          </div>
+
+          <!-- ── Rollos Horneados ───────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.su.sub4">Rollos Horneados</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sh1.name">Salmonito Hot</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sh1.desc">Salmón horneado con queso philadelphia y topping especial.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$140</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sh2.name">Hot Roll</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sh2.desc">Rollo horneado con camarón, queso y topping de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$120</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.sh3.name">Hot Philadelphia</p>
+                <p class="menu-list-item__desc" data-i18n="menu.sh3.desc">Philadelphia horneado con salmón y queso gratinado.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$130</span></div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Panel: Especialidades -->
-        <div id="panel-especialidades" class="menu__panel" role="tabpanel" aria-labelledby="tab-especialidades">
-          <div class="menu__grid">
+        <!-- Panel: Kids -->
+        <div id="panel-kids" class="menu__panel" role="tabpanel" aria-labelledby="tab-kids">
 
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <polygon points="32,10 40,26 58,26 44,38 50,54 32,44 14,54 20,38 6,26 24,26" opacity="0.4"/>
-                  <polygon points="32,18 37,30 50,30 40,38 44,50 32,42 20,50 24,38 14,30 27,30"/>
-                </svg>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.k1.name">Hamburguesa Clásica</p>
+                <p class="menu-list-item__desc" data-i18n="menu.k1.desc">De carne de res, queso amarillo, lechuga, cebolla, tomate. Acompañada de crujientes papas a la francesa.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Palmar</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Sashimi de Aguachile</h3>
-                <p class="menu-card__desc">La fusión que define El Palmar: sashimi de atún bañado en aguachile negro de temporada.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$250</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.k2.name">Dedos de Pescado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.k2.desc">Dedos de filete de pescado acompañado de papas a la francesa.</p>
               </div>
-            </article>
-
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M10 42 C10 28 20 18 32 18 C44 18 54 28 54 42 L54 50 L10 50 Z" opacity="0.4"/>
-                  <path d="M18 42 C22 36 28 40 32 38 C36 40 42 36 46 42"/>
-                  <circle cx="32" cy="28" r="6"/>
-                </svg>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$149</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.k3.name">Nuggets de Pollo</p>
+                <p class="menu-list-item__desc" data-i18n="menu.k3.desc">Crujientes nuggets de pollo acompañados de papas a la francesa.</p>
               </div>
-              <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Palmar</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
-                </div>
-                <h3 class="menu-card__name">Tostada Palmar</h3>
-                <p class="menu-card__desc">Tostada artesanal con camarón curado, pulpo encurtido y chiles toreados. Una tesis sobre el mar.</p>
-                <div class="menu-card__footer">
-                  <span class="menu-card__price">$165</span>
-                </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$149</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.k4.name">Papas a la Francesa</p>
+                <p class="menu-list-item__desc" data-i18n="menu.k4.desc">Crujientes papas fritas acompañadas de cátsup.</p>
               </div>
-            </article>
-
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$99</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.k5.name">Sushi Kids</p>
+                <p class="menu-list-item__desc" data-i18n="menu.k5.desc">Rollito empanizado sin alga con camarón, aguacate y philadelphia.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$145</span></div>
+            </div>
           </div>
+
         </div>
 
-        <!-- Panel: Bebidas -->
-        <div id="panel-bebidas" class="menu__panel" role="tabpanel" aria-labelledby="tab-bebidas">
+        <!-- Panel: Drinks -->
+        <div id="panel-drinks" class="menu__panel" role="tabpanel" aria-labelledby="tab-drinks">
+
+          <!-- ── Postres ────────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.d.sub1">Postres</h3>
+          <p class="menu__panel-note" data-i18n="menu.d.note1">Servidos con cubeta de helado de vainilla.</p>
+          <div class="menu__list">
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dp1.name">Banana Pie</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$120</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dp2.name">Guava Pie</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$120</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dp3.name">Chocolate Cake</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$135</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dp4.name">Cheesecake</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dp5.name">Flan</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$105</span></div></div>
+          </div>
+
+          <!-- ── Cervezas ───────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.d.sub2">Cervezas</h3>
+          <div class="menu__list">
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db1.name">Pacifico Clara</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db2.name">Pacifico Light</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db3.name">Pacifico Suave</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db4.name">Corona</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db5.name">Corona Light</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db6.name">Modelo Especial</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$60</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db7.name">Negra Modelo</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$60</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db8.name">Michelob Ultra</p><p class="menu-list-item__desc">355 ml</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$60</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db9.name">Pacifico Clara Whale</p><p class="menu-list-item__desc" data-i18n="menu.db.whale">Presentación familiar</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$110</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.db10.name">Pacifico Light Whale</p><p class="menu-list-item__desc" data-i18n="menu.db.whale">Presentación familiar</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$110</span></div></div>
+          </div>
+
+          <!-- ── No Alcohólicas ─────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.d.sub3">No Alcohólicas</h3>
+          <div class="menu__list">
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna1.name">Jazmin Tea</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna2.name">Limón Tea</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna3.name">Fresh Lemonade</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna4.name">Mineral Lemonade</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna5.name">Fresh Orangeade</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$55</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna6.name">Agua Embotellada</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$35</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna7.name">Agua Mineral</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$50</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna8.name">Clamato for Beer</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$35</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna9.name">Mixed Clamato</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$70</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna10.name">Pineapple Drinks</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$100</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna11.name">Mango Drinks</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$100</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna12.name">Conga</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$100</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.dna13.name">Fresada</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$100</span></div></div>
+          </div>
+
+          <!-- ── Cocteles de Firma ──────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.d.sub4">Cocteles de Firma</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.dc1.name">Mezcalmar</p>
+                <p class="menu-list-item__desc" data-i18n="menu.dc1.desc">Mezcal, maracuyá, limón y agua mineral.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$170</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.dc2.name">Old Saphire</p>
+                <p class="menu-list-item__desc" data-i18n="menu.dc2.desc">Gin, arándano, limón y agua tónica.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$175</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.dc3.name">Falvo Tonic</p>
+                <p class="menu-list-item__desc" data-i18n="menu.dc3.desc">Coctel de firma con agua tónica y toque cítrico.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$170</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.dc4.name">Mezcalina</p>
+                <p class="menu-list-item__desc" data-i18n="menu.dc4.desc">Mezcal, mango, maracuyá y limón.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$170</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.dc5.name">Passion Mango</p>
+                <p class="menu-list-item__desc" data-i18n="menu.dc5.desc">Vodka, mango, maracuyá y limón.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$170</span></div>
+            </div>
+          </div>
+
+          <!-- ── Bebidas Alcohólicas ────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.d.sub5">Bebidas Alcohólicas</h3>
+          <div class="menu__list">
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da1.name">Sangria</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$160</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da2.name">Clericot</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da3.name">Carajillo</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$165</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da4.name">Mojito</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$150</span></div></div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.da5.name">Flavoured Margarita</p>
+                <p class="menu-list-item__desc" data-i18n="menu.da5.desc">Fresa, piña, mango o maracuyá.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div>
+            </div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da6.name">Piña Colada</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$150</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da7.name">Paloma</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$140</span></div></div>
+            <div class="menu-list-item"><div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.da8.name">Daiquiri</p></div><div class="menu-list-item__prices"><span class="menu-list-item__price">$155</span></div></div>
+          </div>
+
+        </div>
+
+        <!-- Panel: Charola -->
+        <div id="panel-charola" class="menu__panel" role="tabpanel" aria-labelledby="tab-charola">
+
           <div class="menu__grid">
-            <article class="menu-card">
-              <div class="menu-card__img" aria-hidden="true">
-                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20 16 L16 48 L48 48 L44 16 Z" opacity="0.4"/>
-                  <path d="M22 28 L42 28"/>
-                  <circle cx="32" cy="22" r="4"/>
-                  <path d="M32 16 L32 12 C36 8 40 10 38 14"/>
-                </svg>
+
+            <!-- Charola Chica -->
+            <div class="menu-card">
+              <div class="menu-card__img">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
               </div>
               <div class="menu-card__body">
-                <div class="menu-card__footer" style="margin-bottom:0.5rem;">
-                  <span class="menu-card__tag">Cóctel</span>
-                  <span class="menu-card__badge" data-i18n="menu.badge">Pronto</span>
+                <h3 class="menu-card__name" data-i18n="menu.ch1.name">Charola Chica</h3>
+                <div class="menu-card__flavors">
+                  <span class="menu-card__flavor">Favorito Especial</span>
+                  <span class="menu-card__flavor">Spicy Cangrejo</span>
+                  <span class="menu-card__flavor">California Roll</span>
+                  <span class="menu-card__flavor">Eby Roll</span>
                 </div>
-                <h3 class="menu-card__name">Michelada del Mar</h3>
-                <p class="menu-card__desc">Clamato, chile chamoy, limón, sal de chapulín. La bebida que Mazatlán inventó.</p>
                 <div class="menu-card__footer">
-                  <span class="menu-card__price">$85</span>
+                  <span class="menu-card__price">$530</span>
+                  <span class="menu-card__tag" data-i18n="menu.ch.tag.chica">Chica</span>
                 </div>
               </div>
-            </article>
+            </div>
+
+            <!-- Charola Grande -->
+            <div class="menu-card">
+              <div class="menu-card__img">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
+              </div>
+              <div class="menu-card__body">
+                <h3 class="menu-card__name" data-i18n="menu.ch2.name">Charola Grande</h3>
+                <div class="menu-card__flavors">
+                  <span class="menu-card__flavor">Tempura Especial</span>
+                  <span class="menu-card__flavor">Spicy Camarón</span>
+                  <span class="menu-card__flavor">Yu Maki</span>
+                  <span class="menu-card__flavor">Sakura Roll</span>
+                  <span class="menu-card__flavor">Gusano Roll</span>
+                  <span class="menu-card__flavor">Avocado Maki</span>
+                  <span class="menu-card__flavor">California Especial</span>
+                </div>
+                <div class="menu-card__footer">
+                  <span class="menu-card__price">$930</span>
+                  <span class="menu-card__tag" data-i18n="menu.ch.tag.grande">Grande</span>
+                </div>
+              </div>
+            </div>
+
           </div>
+
+          <!-- Contacto para pedidos -->
+          <div class="menu__coming">
+            <p data-i18n="menu.ch.order">Pedidos: 669 546 6940 · 669 100 5111 (WhatsApp)</p>
+          </div>
+
         </div>
 
         <!-- Coming soon note -->
@@ -631,11 +1775,11 @@
             <!-- Review 1 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "El aguachile negro es brutalmente bueno. Llegamos de Guadalajara y sin duda valió el viaje. El contraste entre el picante y el mariscos fresco es algo que no olvidas fácil."
@@ -652,11 +1796,11 @@
             <!-- Review 2 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 stars">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "Best sushi I've tried in all of Mexico. The Pacific tuna roll was outstanding — clean, precise, and the avocado cream sauce was unexpected in the best way possible."
@@ -673,11 +1817,11 @@
             <!-- Review 3 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "Los rolls de aguachile negro son la fusión que Sinaloa merece. Nunca pensé que sushi y mariscos del Pacífico pudieran integrarse tan orgánicamente. Un menú con identidad propia."
@@ -694,11 +1838,11 @@
             <!-- Review 4 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "Ambiente perfecto para cenar en pareja. La palapa, la brisa marina y el servicio cálido — y encima de todo eso, el caldo de camarón más honesto que he probado en años."
@@ -715,11 +1859,11 @@
             <!-- Review 5 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 stars">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "Arrived hungry, left converted. The tuna tataki roll alone is worth the drive to Mazatlán. Seafood that still tastes like the ocean — not like a fridge."
@@ -736,11 +1880,11 @@
             <!-- Review 6 -->
             <article class="review-card">
               <div class="review-card__stars stars" aria-label="5 de 5 estrellas">
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10 1 12.39 7.26 19 8.27 14.5 12.74 15.78 19.02 10 15.77 4.22 19.02 5.5 12.74 1 8.27 7.61 7.26"/></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><use href="#icon-star"></use></svg>
               </div>
               <blockquote class="review-card__text">
                 "El servicio es cálido y el menú tiene identidad: no es sushi de cadena, no es mariscos de turista. Es algo propio de Sinaloa que se respeta a sí mismo. Volvería en cada visita."
@@ -759,17 +1903,13 @@
           <!-- Controls -->
           <div class="reviews__controls">
             <button class="reviews__btn" id="reviewsPrev" aria-label="Reseña anterior">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="15 18 9 12 15 6"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
             </button>
 
             <div class="reviews__dots" role="tablist" aria-label="Navegar reseñas"></div>
 
             <button class="reviews__btn" id="reviewsNext" aria-label="Siguiente reseña">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="9 18 15 12 9 6"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
             </button>
           </div>
         </div><!-- .reviews__carousel -->
@@ -809,10 +1949,7 @@
             <!-- Address -->
             <div class="contact__detail">
               <div class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-location"></use></svg>
               </div>
               <div class="contact__detail-text">
                 <strong data-i18n="contact.addr.l">Dirección</strong>
@@ -823,9 +1960,7 @@
             <!-- Phone -->
             <div class="contact__detail">
               <div class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-phone"></use></svg>
               </div>
               <div class="contact__detail-text">
                 <strong data-i18n="contact.phone.l">Teléfono / WhatsApp</strong>
@@ -836,10 +1971,7 @@
             <!-- Hours -->
             <div class="contact__detail">
               <div class="contact__detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-clock"></use></svg>
               </div>
               <div class="contact__detail-text">
                 <strong data-i18n="contact.hours.l">Horario</strong>
@@ -980,9 +2112,7 @@
           © 2025 El Palmar Mariscos + Sushi. Todos los derechos reservados.
         </p>
         <button class="footer__scroll-top" id="scrollTopBtn" aria-label="Volver arriba">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="18 15 12 9 6 15"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-chevron-up"></use></svg>
         </button>
       </div>
 
