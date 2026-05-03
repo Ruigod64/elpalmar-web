@@ -28,6 +28,7 @@
     'js/preloader.js',
     'js/parallax.js',
     'js/reviews.js',
+    'js/reserve.js',
     'js/animations.js'
   ];
 
