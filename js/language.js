@@ -46,12 +46,12 @@
       'menu.title':        'El menú',
       'menu.subtitle':     'Navega por nuestras categorías y encuentra tu favorito.',
       'menu.tab1':         'Entradas',
-      'menu.tab2':         'Seafood',
+      'menu.tab2':         'Mariscos',
       'menu.tab3':         'Caliente',
-      'menu.tab4':         'Appetizers',
+      'menu.tab4':         'Sushi Entradas',
       'menu.tab5':         'Arroz',
       'menu.tab6':         'Sushi',
-      'menu.tab7':         'Kids',
+      'menu.tab7':         'Niños',
       'menu.tab8':         'Bebidas',
       'menu.tab9':         'Charola',
       'menu.coming':       'Menú completo próximamente — cada platillo fotografiado y descrito.',
@@ -481,7 +481,7 @@
       'footer.scroll':    'Subir',
 
       /* Mission & Vision */
-      'about.mv.tag':         'Misión &amp; Visión',
+      'about.mv.tag':         'Misión & Visión',
       'about.mission.title':  'Misión',
       'about.mission.body':   'Creamos memorias mediante experiencias únicas e inolvidables a través de la fusión de sabores, frescura y calidad de nuestros platillos elaborados con amor, para hacer felices a nuestros invitados.',
       'about.vision.title':   'Visión',
@@ -1008,7 +1008,7 @@
       'footer.scroll':    'Back to top',
 
       /* Mission & Vision */
-      'about.mv.tag':         'Mission &amp; Vision',
+      'about.mv.tag':         'Mission & Vision',
       'about.mission.title':  'Mission',
       'about.mission.body':   'We create memories through unique and unforgettable experiences by blending flavors, freshness, and quality in dishes crafted with love, to make our guests happy.',
       'about.vision.title':   'Vision',

@@ -47,26 +47,6 @@
       });
     }
 
-    /* ── Active nav link ─────────────────────────── */
-    var sections  = document.querySelectorAll('section[id]');
-    var navLinks  = document.querySelectorAll('.nav__links a[href^="#"]');
-
-    sections.forEach(function (section) {
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top center',
-        end: 'bottom center',
-        onEnter: function () { setActiveLink(section.id); },
-        onEnterBack: function () { setActiveLink(section.id); }
-      });
-    });
-
-    function setActiveLink(id) {
-      navLinks.forEach(function (link) {
-        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
-      });
-    }
-
     /* Opciones comunes: once:true previene que elementos ya
        visibles al init queden atascados en opacity:0 */
     var ST_DEFAULTS = { once: true, toggleActions: 'play none none none' };
@@ -159,15 +139,33 @@
     var panels = document.querySelectorAll('.menu__panel');
 
     tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var target = tab.getAttribute('data-tab');
+      tab.addEventListener('click', function (e) {
+        e.preventDefault();
 
-        tabs.forEach(function (t) { t.classList.remove('is-active'); });
-        panels.forEach(function (p) { p.classList.remove('is-active'); });
+        var target   = tab.getAttribute('data-tab');
+        var newPanel = document.getElementById('panel-' + target);
+        var savedY   = window.pageYOffset || document.documentElement.scrollTop;
+        var html     = document.documentElement;
+        var body     = document.body;
 
+        /* Suppress browser scroll-anchoring before any layout change */
+        html.style.overflowAnchor = 'none';
+        body.style.overflowAnchor = 'none';
+
+        /* Show new panel first, then hide others — no zero-height gap */
+        if (newPanel) newPanel.classList.add('is-active');
+        tabs.forEach(function (t)   { if (t !== tab)      t.classList.remove('is-active'); });
+        panels.forEach(function (p) { if (p !== newPanel) p.classList.remove('is-active'); });
         tab.classList.add('is-active');
-        var panel = document.getElementById('panel-' + target);
-        if (panel) panel.classList.add('is-active');
+
+        /* Single restore — no double-correction bounce */
+        window.scrollTo(0, savedY);
+
+        /* Re-enable anchoring after the frame is painted */
+        requestAnimationFrame(function () {
+          html.style.overflowAnchor = '';
+          body.style.overflowAnchor = '';
+        });
       });
     });
   }
@@ -237,12 +235,99 @@
     });
   }
 
+  /* ── Active nav link (scroll-based) ─────────────── */
+  function initActiveNav() {
+    var navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+    if (!navLinks.length) return;
+
+    /* Build ordered list of [id, element] for links that exist in the DOM */
+    var targets = [];
+    navLinks.forEach(function (link) {
+      var id = (link.getAttribute('href') || '').slice(1);
+      var el = id ? document.getElementById(id) : null;
+      if (el) targets.push({ id: id, el: el, link: link });
+    });
+    if (!targets.length) return;
+
+    function getActiveId() {
+      /* A section is "active" when its top is at or above 42% of viewport.
+         We iterate forward and keep overwriting so the last qualifying
+         section wins → always the one closest to (but not past) the trigger. */
+      var trigger = window.pageYOffset + window.innerHeight * 0.42;
+      var activeId = null;
+      for (var i = 0; i < targets.length; i++) {
+        var top = targets[i].el.getBoundingClientRect().top + window.pageYOffset;
+        if (top <= trigger) activeId = targets[i].id;
+      }
+      return activeId;
+    }
+
+    function update() {
+      var id = getActiveId();
+      targets.forEach(function (t) {
+        t.link.classList.toggle('is-active', t.id === id);
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update(); /* set correct state on load */
+  }
+
+  /* ── Lightbox ────────────────────────────────────── */
+  function initLightbox() {
+    var lightbox  = document.getElementById('lightbox');
+    var lbImg     = document.getElementById('lightboxImg');
+    var lbCap     = document.getElementById('lightboxCaption');
+    var lbClose   = document.getElementById('lightboxClose');
+    var lbBackdrop = document.getElementById('lightboxBackdrop');
+    if (!lightbox) return;
+
+    function openLightbox(src, caption) {
+      lbImg.src           = src;
+      lbImg.alt           = caption || '';
+      lbCap.textContent   = caption || '';
+      lbCap.style.display = caption ? '' : 'none';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      setTimeout(function () { lbImg.src = ''; }, 320);
+    }
+
+    /* Wire up all card images */
+    document.querySelectorAll('.menu-card__img img').forEach(function (img) {
+      img.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var caption = img.closest('.menu-card')
+          .querySelector('.menu-card__name');
+        openLightbox(img.src, caption ? caption.textContent : '');
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbBackdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
+
   /* ── Init ────────────────────────────────────────── */
   function init() {
     initGSAP();
     initMenuTabs();
     initNav();
     initScrollTop();
+    initLightbox();
+    initActiveNav();
   }
 
   if (document.readyState === 'loading') {

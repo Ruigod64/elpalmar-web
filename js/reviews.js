@@ -1,7 +1,11 @@
 /**
  * reviews.js
  * Draggable carousel for the reviews section.
- * Mouse drag + touch swipe + prev/next buttons + dot nav.
+ *
+ * Bug fixed: scroll event during GSAP animation was recalculating
+ * currentIndex mid-animation and reverting dots to the previous index.
+ * Solution: isScrolling flag suppresses the scroll handler while
+ * a programmatic scroll is in progress.
  */
 
 (function () {
@@ -10,15 +14,16 @@
   var track = document.querySelector('.reviews__track');
   if (!track) return;
 
-  var prevBtn = document.getElementById('reviewsPrev');
-  var nextBtn = document.getElementById('reviewsNext');
-  var dotsContainer = document.querySelector('.reviews__dots');
+  var prevBtn        = document.getElementById('reviewsPrev');
+  var nextBtn        = document.getElementById('reviewsNext');
+  var dotsContainer  = document.querySelector('.reviews__dots');
 
   /* ── State ──────────────────────────────────────── */
-  var isDragging   = false;
-  var startX       = 0;
-  var scrollStart  = 0;
-  var currentIndex = 0;
+  var currentIndex  = 0;
+  var isDragging    = false;
+  var startX        = 0;
+  var scrollStart   = 0;
+  var isScrolling   = false; /* true while a programmatic scroll runs */
 
   /* ── Helpers ────────────────────────────────────── */
   function getCards() {
@@ -29,65 +34,79 @@
     var first = getCards()[0];
     if (!first) return 0;
     var style = window.getComputedStyle(track);
-    var gap = parseFloat(style.columnGap || style.gap || 0) || 24;
+    var gap   = parseFloat(style.columnGap) || parseFloat(style.gap) || 24;
     return first.offsetWidth + gap;
   }
 
   function updateDots() {
     if (!dotsContainer) return;
-    var dots = dotsContainer.querySelectorAll('.reviews__dot');
-    dots.forEach(function (dot, i) {
-      dot.classList.toggle('is-active', i === currentIndex);
+    dotsContainer.querySelectorAll('.reviews__dot').forEach(function (dot, i) {
+      var active = i === currentIndex;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', String(active));
     });
   }
 
-  function scrollTo(index) {
+  function updateButtons() {
+    var total = getCards().length;
+    if (prevBtn) {
+      var atStart = currentIndex <= 0;
+      prevBtn.disabled = atStart;
+      prevBtn.classList.toggle('is-disabled', atStart);
+    }
+    if (nextBtn) {
+      var atEnd = currentIndex >= total - 1;
+      nextBtn.disabled = atEnd;
+      nextBtn.classList.toggle('is-disabled', atEnd);
+    }
+  }
+
+  /* ── Core: go to index ──────────────────────────── */
+  function goTo(index) {
     var cards = getCards();
-    if (index < 0) index = 0;
-    if (index >= cards.length) index = cards.length - 1;
+    index = Math.max(0, Math.min(index, cards.length - 1));
     currentIndex = index;
 
-    var cardW = getCardWidth();
-    var target = cardW * index;
+    var target = getCardWidth() * index;
+    isScrolling = true;
 
     if (window.gsap) {
       gsap.to(track, {
         scrollLeft: target,
-        duration: 0.5,
-        ease: 'power2.inOut'
+        duration:   0.52,
+        ease:       'power2.inOut',
+        onComplete: function () { isScrolling = false; }
       });
     } else {
-      /* CSS smooth scroll */
       track.scrollTo({ left: target, behavior: 'smooth' });
+      /* fallback: reset flag after CSS smooth-scroll settles */
+      setTimeout(function () { isScrolling = false; }, 650);
     }
 
     updateDots();
+    updateButtons();
   }
 
-  /* ── Build dots ─────────────────────────────────── */
+  /* ── Prev / Next buttons ────────────────────────── */
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function () { goTo(currentIndex - 1); });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function () { goTo(currentIndex + 1); });
+  }
+
+  /* ── Dot navigation ─────────────────────────────── */
   function buildDots() {
     if (!dotsContainer) return;
-    var cards = getCards();
     dotsContainer.innerHTML = '';
-    cards.forEach(function (_, i) {
+    getCards().forEach(function (_, i) {
       var dot = document.createElement('button');
-      dot.className = 'reviews__dot' + (i === 0 ? ' is-active' : '');
-      dot.setAttribute('aria-label', 'Review ' + (i + 1));
-      dot.addEventListener('click', function () { scrollTo(i); });
+      dot.type = 'button';
+      dot.className      = 'reviews__dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label',    'Reseña ' + (i + 1));
+      dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      dot.addEventListener('click', function () { goTo(i); });
       dotsContainer.appendChild(dot);
-    });
-  }
-
-  /* ── Buttons ────────────────────────────────────── */
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function () {
-      scrollTo(currentIndex - 1);
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function () {
-      scrollTo(currentIndex + 1);
     });
   }
 
@@ -101,26 +120,18 @@
 
   document.addEventListener('mousemove', function (e) {
     if (!isDragging) return;
-    var dx = e.pageX - startX;
-    track.scrollLeft = scrollStart - dx;
+    track.scrollLeft = scrollStart - (e.pageX - startX);
   });
 
   document.addEventListener('mouseup', function (e) {
     if (!isDragging) return;
-    isDragging = false;
+    isDragging             = false;
     track.style.userSelect = '';
-
-    /* Snap to nearest card */
-    var cardW = getCardWidth();
-    if (cardW > 0) {
-      var dx = e.pageX - startX;
-      if (Math.abs(dx) > 40) {
-        if (dx < 0) scrollTo(currentIndex + 1);
-        else        scrollTo(currentIndex - 1);
-      } else {
-        scrollTo(currentIndex);
-      }
-    }
+    var dx = e.pageX - startX;
+    goTo(Math.abs(dx) > 40
+      ? (dx < 0 ? currentIndex + 1 : currentIndex - 1)
+      : currentIndex
+    );
   });
 
   /* ── Touch swipe ────────────────────────────────── */
@@ -134,32 +145,37 @@
   track.addEventListener('touchend', function (e) {
     var dx = e.changedTouches[0].clientX - touchStartX;
     if (Math.abs(dx) > 40) {
-      if (dx < 0) scrollTo(currentIndex + 1);
-      else        scrollTo(currentIndex - 1);
+      goTo(dx < 0 ? currentIndex + 1 : currentIndex - 1);
+    } else {
+      goTo(currentIndex); /* snap back if short tap */
     }
   }, { passive: true });
 
-  /* ── Keyboard navigation ────────────────────────── */
-  track.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft')  scrollTo(currentIndex - 1);
-    if (e.key === 'ArrowRight') scrollTo(currentIndex + 1);
-  });
-
-  /* ── Update current index on scroll ─────────────── */
+  /* ── Scroll listener (manual drag only) ────────────
+     Skipped while isScrolling to prevent mid-animation
+     flicker that was causing the dot de-sync bug.        */
   track.addEventListener('scroll', function () {
+    if (isScrolling) return;
     var cardW = getCardWidth();
-    if (cardW > 0) {
-      var idx = Math.round(track.scrollLeft / cardW);
-      if (idx !== currentIndex) {
-        currentIndex = idx;
-        updateDots();
-      }
+    if (cardW <= 0) return;
+    var idx = Math.round(track.scrollLeft / cardW);
+    if (idx !== currentIndex) {
+      currentIndex = idx;
+      updateDots();
+      updateButtons();
     }
   }, { passive: true });
+
+  /* ── Keyboard ───────────────────────────────────── */
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+  });
 
   /* ── Init ───────────────────────────────────────── */
   function init() {
     buildDots();
+    updateButtons();
   }
 
   if (document.readyState === 'loading') {

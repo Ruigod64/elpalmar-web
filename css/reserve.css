@@ -240,15 +240,14 @@
   justify-content: center;
 }
 
-/* WhatsApp button: use green tint on hover to reinforce the brand */
 .reserve__btn-wa {
-  background: var(--color-orange);
-  box-shadow: 0 4px 20px rgba(247, 148, 29, 0.35);
+  background: #25D366;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
 }
 
 .reserve__btn-wa:hover {
-  background: var(--color-orange-dark);
-  box-shadow: 0 8px 30px rgba(247, 148, 29, 0.50);
+  background: #1DAA56;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.50);
 }
 
 /* ── Responsive ───────────────────────────────────── */

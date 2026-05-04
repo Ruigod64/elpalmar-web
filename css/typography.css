@@ -2,7 +2,7 @@
    TYPOGRAPHY — Fonts & Text Utilities
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Fonts loaded via <link> in <head> — removed @import to avoid blocking chain */
 
 /* ── Headings ─────────────────────────────────────── */
 h1, h2, h3, h4 {

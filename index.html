@@ -14,9 +14,22 @@
 
   <title>El Palmar · Mariscos + Sushi · Mazatlán</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-Photoroom.png">
+
+  <!-- Open Graph image (update to absolute URL on deploy) -->
+  <meta property="og:image" content="assets/logo-Photoroom.png">
+
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap">
+
+  <!-- GSAP preload hints -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" as="script">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" as="script">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
@@ -330,8 +343,6 @@
             <p data-i18n="about.body1">
               Mazatlán tiene un secreto: los mejores mariscos no se anuncian, se descubren. Y una vez que los pruebas, el Océano Pacífico nunca vuelve a ser el mismo fondo de pantalla.
             </p>
-            <p data-i18n="about.body2">
-              En El Palmar fusionamos la tradición pesquera de Sinaloa con la precisión del sushi japonés. Cada plato es una conversación entre dos mares, dos culturas y un solo propósito: que te quedes sin palabras.
             </p>
             <a href="#menu" class="btn btn--outline" data-i18n="about.cta">Ver el menú completo</a>
           </div>
@@ -347,7 +358,7 @@
 
             <!-- Floating stats -->
             <div class="about__stat about__stat--1">
-              <strong>+8</strong>
+              <strong>+5</strong>
               <span data-i18n="about.stat1">Años frente al mar</span>
             </div>
             <div class="about__stat about__stat--2">
@@ -364,7 +375,7 @@
         <!-- Mission & Vision -->
         <div class="about__mv">
           <div class="about__mv-header animate-fade-up">
-            <span class="tag" data-i18n="about.mv.tag">Misión &amp; Visión</span>
+            <span class="tag" data-i18n="about.mv.tag">Misión & Visión</span>
           </div>
           <div class="about__mv-grid">
 
@@ -482,54 +493,54 @@
         <header class="section-header animate-fade-up">
           <span class="tag" data-i18n="menu.tag">Lo que preparamos</span>
           <h2 id="menu-title" data-i18n="menu.title">El menú</h2>
-          <p data-i18n="menu.subtitle">Próximamente añadiremos todo nuestro menú aquí. Por ahora, ven y déjate sorprender.</p>
+          <p data-i18n="menu.subtitle">Navega por nuestras categorías y encuentra tu favorito.</p>
         </header>
 
         <!-- Tabs -->
         <div class="menu__tabs" role="tablist" aria-label="Categorías del menú">
 
-          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-entradas" id="tab-entradas" data-tab="entradas">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-utensils"></use></svg>
+          <button type="button" class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-entradas" id="tab-entradas" data-tab="entradas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3"/><path d="M21 15v7"/></svg>
             <span data-i18n="menu.tab1">Entradas</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-seafood" id="tab-seafood" data-tab="seafood">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-wave"></use></svg>
-            <span data-i18n="menu.tab2">Seafood</span>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-seafood" id="tab-seafood" data-tab="seafood">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 12 C5 8 8 16 12 12 C16 8 19 16 22 12"/></svg>
+            <span data-i18n="menu.tab2">Mariscos</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-caliente" id="tab-caliente" data-tab="caliente">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-flame"></use></svg>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-caliente" id="tab-caliente" data-tab="caliente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
             <span data-i18n="menu.tab3">Caliente</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-appetizers" id="tab-appetizers" data-tab="appetizers">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-fusion"></use></svg>
-            <span data-i18n="menu.tab4">Appetizers</span>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-appetizers" id="tab-appetizers" data-tab="appetizers">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3L6 21M16 3L18 21"/><path d="M6 8h12M6 16h12"/></svg>
+            <span data-i18n="menu.tab4">Sushi Entradas</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-rice" id="tab-rice" data-tab="rice">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-bowl"></use></svg>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-rice" id="tab-rice" data-tab="rice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13h20"/><path d="M5 13c0 3.9 3.1 7 7 7s7-3.1 7-7"/><path d="M9 5c0 2-1 3-1 5M15 5c0 2 1 3 1 5"/></svg>
             <span data-i18n="menu.tab5">Arroz</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-sushi" id="tab-sushi" data-tab="sushi">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-chopsticks"></use></svg>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-sushi" id="tab-sushi" data-tab="sushi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="8" y1="3" x2="7" y2="21"/><line x1="16" y1="3" x2="17" y2="21"/></svg>
             <span data-i18n="menu.tab6">Sushi</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-kids" id="tab-kids" data-tab="kids">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-smile"></use></svg>
-            <span data-i18n="menu.tab7">Kids</span>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-kids" id="tab-kids" data-tab="kids">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            <span data-i18n="menu.tab7">Niños</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks" data-tab="drinks">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#icon-cup"></use></svg>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks" data-tab="drinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M17 8h2a2 2 0 1 1 0 4h-2"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
             <span data-i18n="menu.tab8">Bebidas</span>
           </button>
 
-          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-charola" id="tab-charola" data-tab="charola">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
+          <button type="button" class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-charola" id="tab-charola" data-tab="charola">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="13" width="18" height="4" rx="1"/><path d="M6 13V9a6 4 0 0 1 12 0v4"/><path d="M9 17v2M15 17v2"/></svg>
             <span data-i18n="menu.tab9">Charola</span>
           </button>
 
@@ -828,7 +839,7 @@
 
             <div class="menu-list-item">
               <div class="menu-list-item__info">
-                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2px;">
+                <div class="menu-list-item__name-row">
                   <p class="menu-list-item__name" data-i18n="menu.sf13.name">Ceviche Morita</p>
                   <span class="menu-card__badge" data-i18n="menu.tag.nuevo">Nuevo</span>
                 </div>
@@ -905,97 +916,6 @@
         <!-- Panel: Caliente -->
         <div id="panel-caliente" class="menu__panel" role="tabpanel" aria-labelledby="tab-caliente">
 
-          <!-- ── Lo Caliente del Palmar ─────────────────── -->
-          <h3 class="menu__subtitle" data-i18n="menu.c.sub2">Lo Caliente del Palmar</h3>
-          <div class="menu__list">
-            <div class="menu-list-item">
-              <div class="menu-list-item__info">
-                <p class="menu-list-item__name" data-i18n="menu.c7.name">Chicharrón Atún/Pescado</p>
-                <p class="menu-list-item__desc" data-i18n="menu.c7.desc">200 gramos de crujiente cubos de atún o pesca del día; servido en una cama de lechuga fresca, con guacamole y nuestra salsa tatemada.</p>
-              </div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$255</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info">
-                <p class="menu-list-item__name" data-i18n="menu.c8.name">Hamburguesa El Palmar</p>
-                <p class="menu-list-item__desc" data-i18n="menu.c8.desc">Jugosa carne y camarones salteados, queso gouda, lechuga, tomate, cebolla asada, aderezo de chipotle, acompañada de crujientes papas a la francesa.</p>
-              </div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$245</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info">
-                <p class="menu-list-item__name" data-i18n="menu.c9.name">Asado</p>
-                <p class="menu-list-item__desc" data-i18n="menu.c9.desc">El tradicional de Mazatlán, cuadros de atún/camarón y papa, fritos, coronado con lechuga, zanahoria, cebolla encurtida, queso, crema y nuestro caldo de camarón.</p>
-              </div>
-              <div class="menu-list-item__prices">
-                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Atún</span>$225</span>
-                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Camarón</span>$255</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── Pescados ───────────────────────────────── -->
-          <h3 class="menu__subtitle" data-i18n="menu.c.sub3">Pescados</h3>
-          <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);letter-spacing:0.06em;margin-bottom:var(--space-4);" data-i18n="menu.c.guarn">Servidos con ensalada fresca, arroz y salsa tatemada.</p>
-          <div class="menu__list">
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p1.name">Filete a la Plancha</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p2.name">Filete Empanizado</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p3.name">Filete Zarandeado</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$260</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p4.name">Medallón de Atún</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
-            </div>
-          </div>
-
-          <!-- ── Arrachera & Pulpo ──────────────────────── -->
-          <div class="menu__list">
-            <div class="menu-list-item">
-              <div class="menu-list-item__info">
-                <p class="menu-list-item__name" data-i18n="menu.c.arr.name">Arrachera</p>
-                <p class="menu-list-item__desc" data-i18n="menu.c.arr.desc">Asada a la plancha, servida con ensalada fresca, arroz y guacamole.</p>
-              </div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info">
-                <p class="menu-list-item__name" data-i18n="menu.c11.name">Pulpo Zarandeado</p>
-                <p class="menu-list-item__desc" data-i18n="menu.c11.desc">Salteado a la mantequilla con ajo y nuestra salsa del Zarandeado de la casa.</p>
-              </div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$360</span></div>
-            </div>
-          </div>
-
-          <!-- ── Camarones ──────────────────────────────── -->
-          <h3 class="menu__subtitle" data-i18n="menu.c.sub4">Camarones</h3>
-          <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);letter-spacing:0.06em;margin-bottom:var(--space-4);" data-i18n="menu.c.guarn">Servidos con ensalada fresca, arroz y salsa tatemada.</p>
-          <div class="menu__list">
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam1.name">Empanizados</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$270</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam2.name">Roca</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam3.name">Al Coco</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
-            </div>
-            <div class="menu-list-item">
-              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam4.name">Imperiales</p></div>
-              <div class="menu-list-item__prices"><span class="menu-list-item__price">$290</span></div>
-            </div>
-          </div>
-
           <!-- ── La Taquiza del Palmar ──────────────────── -->
           <h3 class="menu__subtitle" data-i18n="menu.c.sub1">La Taquiza del Palmar</h3>
           <div class="menu__list">
@@ -1042,6 +962,98 @@
               <div class="menu-list-item__prices"><span class="menu-list-item__price">$175</span></div>
             </div>
           </div>
+
+          <!-- ── Lo Caliente del Palmar ─────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.c.sub2">Lo Caliente del Palmar</h3>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c7.name">Chicharrón Atún/Pescado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c7.desc">200 gramos de crujiente cubos de atún o pesca del día; servido en una cama de lechuga fresca, con guacamole y nuestra salsa tatemada.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$255</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c8.name">Hamburguesa El Palmar</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c8.desc">Jugosa carne y camarones salteados, queso gouda, lechuga, tomate, cebolla asada, aderezo de chipotle, acompañada de crujientes papas a la francesa.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$245</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c9.name">Asado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c9.desc">El tradicional de Mazatlán, cuadros de atún/camarón y papa, fritos, coronado con lechuga, zanahoria, cebolla encurtida, queso, crema y nuestro caldo de camarón.</p>
+              </div>
+              <div class="menu-list-item__prices">
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Atún</span>$225</span>
+                <span class="menu-list-item__price"><span class="menu-list-item__price-label">Camarón</span>$255</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Pescados ───────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.c.sub3">Pescados</h3>
+          <p class="menu__panel-note" data-i18n="menu.c.guarn">Servidos con ensalada fresca, arroz y salsa tatemada.</p>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p1.name">Filete a la Plancha</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p2.name">Filete Empanizado</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p3.name">Filete Zarandeado</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$260</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.p4.name">Medallón de Atún</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$250</span></div>
+            </div>
+          </div>
+
+          <!-- ── Arrachera & Pulpo ──────────────────────── -->
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c.arr.name">Arrachera</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c.arr.desc">Asada a la plancha, servida con ensalada fresca, arroz y guacamole.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__name" data-i18n="menu.c11.name">Pulpo Zarandeado</p>
+                <p class="menu-list-item__desc" data-i18n="menu.c11.desc">Salteado a la mantequilla con ajo y nuestra salsa del Zarandeado de la casa.</p>
+              </div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$360</span></div>
+            </div>
+          </div>
+
+          <!-- ── Camarones ──────────────────────────────── -->
+          <h3 class="menu__subtitle" data-i18n="menu.c.sub4">Camarones</h3>
+          <p class="menu__panel-note" data-i18n="menu.c.guarn">Servidos con ensalada fresca, arroz y salsa tatemada.</p>
+          <div class="menu__list">
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam1.name">Empanizados</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$270</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam2.name">Roca</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam3.name">Al Coco</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$280</span></div>
+            </div>
+            <div class="menu-list-item">
+              <div class="menu-list-item__info"><p class="menu-list-item__name" data-i18n="menu.c.cam4.name">Imperiales</p></div>
+              <div class="menu-list-item__prices"><span class="menu-list-item__price">$290</span></div>
+            </div>
+          </div>
+
 
         </div>
 
@@ -1124,10 +1136,11 @@
 
           <!-- ── Teriyaki ───────────────────────────────── -->
           <h3 class="menu__subtitle" data-i18n="menu.a.sub2">Teriyaki</h3>
-          <p style="font-size:var(--fs-xs);color:rgba(255,255,255,0.45);letter-spacing:0.06em;margin-bottom:var(--space-4);" data-i18n="menu.a.teriyaki.desc">Frescos pimientos, cebolla y zanahoria salteados con nuestra salsa Teriyaki especial, ¡hecha en casa! Servido sobre una cama de arroz al vapor.</p>
           <div class="menu__list">
             <div class="menu-list-item">
-              <div class="menu-list-item__info"></div>
+              <div class="menu-list-item__info">
+                <p class="menu-list-item__desc" data-i18n="menu.a.teriyaki.desc">Frescos pimientos, cebolla y zanahoria salteados con nuestra salsa Teriyaki especial, ¡hecha en casa! Servido sobre una cama de arroz al vapor.</p>
+              </div>
               <div class="menu-list-item__prices">
                 <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.pollo">Pollo</span>$205</span>
                 <span class="menu-list-item__price"><span class="menu-list-item__price-label" data-i18n="menu.var.filete">Filete de Res</span>$230</span>
@@ -1590,7 +1603,7 @@
             <!-- Charola Chica -->
             <div class="menu-card">
               <div class="menu-card__img">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
+                <img src="assets/Charola-peque%C3%B1a.png" alt="Charola Chica — sushi tray small" loading="lazy">
               </div>
               <div class="menu-card__body">
                 <h3 class="menu-card__name" data-i18n="menu.ch1.name">Charola Chica</h3>
@@ -1610,7 +1623,7 @@
             <!-- Charola Grande -->
             <div class="menu-card">
               <div class="menu-card__img">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-tray"></use></svg>
+                <img src="assets/Charola-grande.png" alt="Charola Grande — sushi tray large" loading="lazy">
               </div>
               <div class="menu-card__body">
                 <h3 class="menu-card__name" data-i18n="menu.ch2.name">Charola Grande</h3>
@@ -2181,6 +2194,22 @@
 
     </div>
   </footer>
+
+  <!-- ══════════════════════════════════════════════
+       LIGHTBOX
+  ══════════════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada" aria-hidden="true">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar imagen" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" class="lightbox__img" src="" alt="">
+      <figcaption id="lightboxCaption" class="lightbox__caption"></figcaption>
+    </figure>
+  </div>
 
   <!-- Scripts — browser-support y language son síncronos para evitar FOUC -->
   <script src="js/browser-support.js"></script>
