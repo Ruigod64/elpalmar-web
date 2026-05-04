@@ -101,9 +101,14 @@
 
     var phoneRaw = inputEl('phone').value.trim().replace(/\D/g, '');
 
+    var codeSelect = document.getElementById('reserve-phone-code');
+    var rawCode    = codeSelect ? codeSelect.value : '52';
+    /* Canada uses same dial code as USA — strip the -CA suffix */
+    var dialCode   = rawCode.replace(/-[A-Z]+$/, '');
+
     var data = {
       name:   inputEl('name').value.trim(),
-      phone:  '+52 ' + inputEl('phone').value.trim(),
+      phone:  '+' + dialCode + ' ' + inputEl('phone').value.trim(),
       guests: inputEl('guests').value,
       date:   inputEl('date').value,
       time:   inputEl('time').value,

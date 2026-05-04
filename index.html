@@ -1877,7 +1877,35 @@
                 <span class="required" aria-hidden="true">*</span>
               </label>
               <div class="reserve__phone-wrap">
-                <span class="reserve__phone-prefix" aria-hidden="true">+52</span>
+                <select class="reserve__phone-code" id="reserve-phone-code" aria-label="Código de país">
+                  <optgroup label="América del Norte">
+                    <option value="52"  selected>🇲🇽 +52</option>
+                    <option value="1"          >🇺🇸 +1</option>
+                    <option value="1-CA"       >🇨🇦 +1</option>
+                  </optgroup>
+                  <optgroup label="América Latina">
+                    <option value="55">🇧🇷 +55</option>
+                    <option value="57">🇨🇴 +57</option>
+                    <option value="54">🇦🇷 +54</option>
+                    <option value="56">🇨🇱 +56</option>
+                    <option value="51">🇵🇪 +51</option>
+                    <option value="58">🇻🇪 +58</option>
+                    <option value="502">🇬🇹 +502</option>
+                  </optgroup>
+                  <optgroup label="Europa">
+                    <option value="34">🇪🇸 +34</option>
+                    <option value="44">🇬🇧 +44</option>
+                    <option value="49">🇩🇪 +49</option>
+                    <option value="33">🇫🇷 +33</option>
+                    <option value="39">🇮🇹 +39</option>
+                    <option value="31">🇳🇱 +31</option>
+                  </optgroup>
+                  <optgroup label="Otros">
+                    <option value="61">🇦🇺 +61</option>
+                    <option value="81">🇯🇵 +81</option>
+                    <option value="86">🇨🇳 +86</option>
+                  </optgroup>
+                </select>
                 <input
                   class="reserve__input"
                   type="tel"
