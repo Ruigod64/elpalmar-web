@@ -481,3 +481,20 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Charola Video ────────────────────────────────── */
+.charola-video {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-8);
+  aspect-ratio: 16 / 9;
+  background: var(--color-ocean-mid);
+}
+
+.charola-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -8,17 +8,17 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="El Palmar · Mariscos + Sushi · Mazatlán">
-  <meta property="og:description" content="No venimos a convencerte. El mar lo hará por nosotros.">
+  <meta property="og:description" content="Aquí pasamos la vida más sabrosa.">
   <meta property="og:type" content="restaurant">
   <meta property="og:locale" content="es_MX">
 
   <title>El Palmar · Mariscos + Sushi · Mazatlán</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo-Photoroom.png">
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <!-- Open Graph image (update to absolute URL on deploy) -->
-  <meta property="og:image" content="assets/logo-Photoroom.png">
+  <meta property="og:image" content="assets/logo.png">
 
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -201,7 +201,7 @@
 
       <!-- Logo -->
       <a href="#inicio" class="nav__logo" aria-label="El Palmar — Volver al inicio">
-        <img src="assets/logo-Photoroom.png" alt="El Palmar Mariscos + Sushi" width="110" height="69">
+        <img src="assets/logo.png" alt="El Palmar Mariscos + Sushi" width="110" height="69">
       </a>
 
       <!-- Desktop links -->
@@ -246,6 +246,11 @@
          HERO
     ════════════════════════════════════════════════ -->
     <section id="inicio" class="hero" aria-labelledby="hero-title">
+
+      <!-- Mobile hero video -->
+      <video class="hero__mobile-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
 
       <!-- Parallax sky layer -->
       <div class="hero__layer hero__layer--sky" aria-hidden="true"></div>
@@ -306,8 +311,8 @@
         <span class="hero__eyebrow" data-i18n="hero.eyebrow">Mazatlán, Sinaloa · México</span>
 
         <h1 id="hero-title" class="hero__title">
-          <span data-i18n="hero.title">No venimos a convencerte.</span><br>
-          <span class="accent" data-i18n="hero.title2">El mar lo hará por nosotros.</span>
+          <span data-i18n="hero.title">Aquí pasamos</span><br>
+          <span class="accent" data-i18n="hero.title2">la vida más sabrosa.</span>
         </h1>
 
         <p class="hero__subtitle" data-i18n="hero.subtitle">
@@ -353,7 +358,7 @@
             <div class="about__ring about__ring--outer" aria-hidden="true"></div>
 
             <div class="about__logo-center">
-              <img src="assets/logo-Photoroom.png" alt="El Palmar" width="180" height="113">
+              <img src="assets/logo.png" alt="El Palmar" width="180" height="113">
             </div>
 
             <!-- Floating stats -->
@@ -483,6 +488,184 @@
         </svg>
       </div>
     </section>
+
+    <!-- ════════════════════════════════════════════
+         DESTACADOS — Storytelling Visual
+    ════════════════════════════════════════════════ -->
+    <section id="destacados" class="destacados" aria-label="Nuestros sabores">
+
+      <!-- Intro -->
+      <div class="dest-intro dest-anim">
+        <span class="tag" data-i18n="dest.tag">Nuestros Sabores</span>
+        <h2 class="dest-intro__title"><span data-i18n="dest.title">Del mar</span><br><span class="accent" data-i18n="dest.title2">a tu mesa</span></h2>
+        <p class="dest-intro__sub" data-i18n="dest.sub">Desliza cada galería y descubre los sabores que hacen de El Palmar un lugar que no se olvida.</p>
+      </div>
+
+      <!-- ── 1. Vamos Empezando ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat1">Vamos Empezando</span>
+        <div class="dest-carousel" aria-label="Vamos Empezando">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/vamos%20empezando/torre-palmar.jpg" alt="Torre Palmar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Torre Palmar</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/molca-palmar.JPG" alt="Molcajete Palmar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Molcajete Palmar</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/campechana.jpg" alt="Campechana" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Campechana</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/campechano-para-picar.jpg" alt="Campechano para Picar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Campechano para Picar</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/coctel-cam.jpg" alt="Cóctel de Camarón" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Cóctel de Camarón</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/pate-cam.JPG" alt="Paté de Camarón" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Paté de Camarón</span></div></div>
+            <div class="dest-slide"><img src="assets/vamos%20empezando/cam-picar.jpg" alt="Camarón para Picar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Camarón para Picar</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 1 -->
+      <div class="dest-story dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s1.label">Para Empezar</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s1.title">Así empieza</span><br><em data-i18n="dest.s1.title2">la experiencia</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s1.body">Frescos, generosos y con el sello inconfundible del Pacífico. Todo lo que necesitas para abrir el apetito.</p>
+      </div>
+
+      <!-- ── 2. Ceviches, Aguachiles y Tostadas ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat2">Ceviches, Aguachiles y Tostadas</span>
+        <div class="dest-carousel" aria-label="Ceviches Aguachiles y Tostadas">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/aguachile.jpg" alt="Aguachile" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Aguachile</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/ceviche-tres-puertos.png" alt="Ceviche Tres Puertos" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ceviche Tres Puertos</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/ceviche-loreto.jpg" alt="Ceviche Loreto" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ceviche Loreto</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/ceviche-san-carlos.JPG" alt="Ceviche San Carlos" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ceviche San Carlos</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/ceviche-sierra.jpg" alt="Ceviche Sierra" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ceviche Sierra</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/ceviche-vale.JPG" alt="Ceviche Vale" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ceviche Vale</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/tostada-ceviche-cam.jpg" alt="Tostada de Ceviche" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Tostada de Ceviche</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/tostada-jaiba.jpg" alt="Tostada de Jaiba" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Tostada de Jaiba</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/tostada-mzt.JPG" alt="Tostada Mazatlán" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Tostada Mazatlán</span></div></div>
+            <div class="dest-slide"><img src="assets/ceviches%20aguachiles%20y%20tostadas/won-ton.JPG" alt="Won Ton" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Won Ton</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="dest-story dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s2.label">El Mar Crudo</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s2.title">Frescura que</span><br><em data-i18n="dest.s2.title2">no se disculpa</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s2.body">Cada ceviche, un diálogo entre el océano y la tradición sinaloense. Sin artificios, solo el producto del día.</p>
+      </div>
+
+      <!-- ── 3. Taquiza + Lo Caliente ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat3">Taquiza y Lo Caliente</span>
+        <div class="dest-carousel" aria-label="Taquiza y Lo Caliente">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/taquiza/tacos-gobernador.jpg" alt="Tacos Gobernador" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Tacos Gobernador</span></div></div>
+            <div class="dest-slide"><img src="assets/taquiza/chorreada-palmar.jpg" alt="Chorreada Palmar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Chorreada Palmar</span></div></div>
+            <div class="dest-slide"><img src="assets/taquiza/taco-zaran-cam.JPG" alt="Taco Zarán de Camarón" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Taco Zarán de Camarón</span></div></div>
+            <div class="dest-slide"><img src="assets/taquiza/taco-zaran-pulpo.JPG" alt="Taco Zarán de Pulpo" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Taco Zarán de Pulpo</span></div></div>
+            <div class="dest-slide"><img src="assets/caliente/pulpo-zaran.jpg" alt="Pulpo Zarán" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Pulpo Zarán</span></div></div>
+            <div class="dest-slide"><img src="assets/caliente/filete-zaran.jpg" alt="Filete Zarán" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Filete Zarán</span></div></div>
+            <div class="dest-slide"><img src="assets/caliente/cam-coco.JPG" alt="Camarón al Coco" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Camarón al Coco</span></div></div>
+            <div class="dest-slide"><img src="assets/caliente/chicharron-atun.jpg" alt="Chicharrón de Atún" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Chicharrón de Atún</span></div></div>
+            <div class="dest-slide"><img src="assets/caliente/hamburguesa.jpg" alt="Hamburguesa Palmar" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Hamburguesa Palmar</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="dest-story dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s3.label">Fuego y Tradición</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s3.title">Del taco al zarán,</span><br><em data-i18n="dest.s3.title2">el Pacífico en llamas</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s3.body">Taquiza sinaloense y cocina caliente, dos mundos que en El Palmar comparten el mismo fuego.</p>
+      </div>
+
+      <!-- ── 4. Sushi Entradas + Arroz ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat4">Sushi Entradas y Arroz</span>
+        <div class="dest-carousel" aria-label="Sushi Entradas y Arroz">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/sushi%20entradas/camarones-yu.jpg" alt="Camarones Yu Yu" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Camarones Yu Yu</span></div></div>
+            <div class="dest-slide"><img src="assets/sushi%20entradas/kushiages.JPG" alt="Kushiage" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Kushiage</span></div></div>
+            <div class="dest-slide"><img src="assets/sushi%20entradas/nigiris.png" alt="Nigiris" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Nigiris</span></div></div>
+            <div class="dest-slide"><img src="assets/arroz/tuna-tower.jpg" alt="Tuna Tower" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Tuna Tower</span></div></div>
+            <div class="dest-slide"><img src="assets/arroz/yakimeshi-esp.JPG" alt="Yakimeshi Especial" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Yakimeshi Especial</span></div></div>
+            <div class="dest-slide"><img src="assets/arroz/yakimeshi-sup.JPG" alt="Yakimeshi Superior" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Yakimeshi Superior</span></div></div>
+            <div class="dest-slide"><img src="assets/arroz/yakimeshi.jpg" alt="Yakimeshi" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Yakimeshi</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 4 -->
+      <div class="dest-story dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s4.label">Precisión Japonesa</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s4.title">Donde Sinaloa</span><br><em data-i18n="dest.s4.title2">se encuentra con Japón</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s4.body">Kushiage, nigiris, yakimeshi. Técnica y producto que demuestran que la fusión no es moda — es destino.</p>
+      </div>
+
+      <!-- ── 7. Roll ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat5">Rolls</span>
+        <div class="dest-carousel" aria-label="Rolls">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/roll/rainbow-roll.jpg" alt="Rainbow Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Rainbow Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/favorito-especial.jpg" alt="Favorito Especial" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Favorito Especial</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/mango-roll.JPG" alt="Mango Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Mango Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/guamuchilito-roll.jpg" alt="Guamuchilito Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Guamuchilito Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/kento-rol.JPG" alt="Kento Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Kento Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/power-rol.JPG" alt="Power Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Power Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/ryo-roll.jpg" alt="Ryo Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Ryo Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/avocado-esp.jpg" alt="Avocado Roll Especial" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Avocado Roll Especial</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/salmoncito-hot.jpg" alt="Salmoncito Hot" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Salmoncito Hot</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/shake-roll.jpg" alt="Shake Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Shake Roll</span></div></div>
+            <div class="dest-slide"><img src="assets/roll/no-name-rol.JPG" alt="No Name Roll" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">No Name Roll</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 7 -->
+      <div class="dest-story dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s5.label">Creatividad sin Límites</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s5.title">Rolls que</span><br><em data-i18n="dest.s5.title2">no se olvidan</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s5.body">Once rolls, once historias. Cada uno con su personalidad, todos con el mismo compromiso: sorprenderte.</p>
+      </div>
+
+      <!-- ── 8. Cócteles ── -->
+      <div class="dest-block">
+        <span class="dest-block__label" data-i18n="dest.cat6">Cócteles</span>
+        <div class="dest-carousel" aria-label="Cócteles">
+          <div class="dest-track">
+            <div class="dest-slide"><img src="assets/cocteles/margarita-mango.JPG" alt="Margarita de Mango" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Margarita de Mango</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/mezcalina.png" alt="Mezcalina" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Mezcalina</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/gin-tonic.png" alt="Gin Tonic" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Gin Tonic</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/paloma-tonic.png" alt="Paloma Tonic" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Paloma Tonic</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/old-sapphire.png" alt="Old Sapphire" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Old Sapphire</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/piñada.JPG" alt="Piñada" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Piñada</span></div></div>
+            <div class="dest-slide"><img src="assets/cocteles/sangria.JPG" alt="Sangría" loading="lazy"><div class="dest-slide__caption"><span class="dest-slide__name">Sangría</span></div></div>
+          </div>
+          <div class="dest-dots" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Story 8 — CTA -->
+      <div class="dest-story dest-story--cta dest-anim">
+        <div class="dest-divider"></div>
+        <span class="dest-story__label" data-i18n="dest.s6.label">La Experiencia Completa</span>
+        <h3 class="dest-story__title"><span data-i18n="dest.s6.title">La tarde perfecta</span><br><em data-i18n="dest.s6.title2">tiene un sabor</em></h3>
+        <p class="dest-story__body" data-i18n="dest.s6.body">Ven a descubrirlo. Una mesa, un cóctel y el menú completo esperándote frente al Pacífico.</p>
+        <div class="dest-cta-group">
+          <a href="#menu" class="btn btn--primary" data-i18n="dest.cta1">Ver el menú completo</a>
+          <a href="#reservar" class="btn btn--ghost" data-i18n="dest.cta2">Reservar mesa</a>
+        </div>
+      </div>
+
+    </section>
+
 
     <!-- ════════════════════════════════════════════
          MENU
@@ -1598,11 +1781,18 @@
         <!-- Panel: Charola -->
         <div id="panel-charola" class="menu__panel" role="tabpanel" aria-labelledby="tab-charola">
 
+          <!-- Video destacado -->
+          <div class="charola-video">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/charola.mp4" type="video/mp4">
+            </video>
+          </div>
+
           <div class="menu__grid">
 
             <!-- Charola Chica -->
             <div class="menu-card">
-              <div class="menu-card__img">
+              <div class="menu-card__img" style="display:none">
                 <img src="assets/Charola-peque%C3%B1a.png" alt="Charola Chica — sushi tray small" loading="lazy">
               </div>
               <div class="menu-card__body">
@@ -1622,7 +1812,7 @@
 
             <!-- Charola Grande -->
             <div class="menu-card">
-              <div class="menu-card__img">
+              <div class="menu-card__img" style="display:none">
                 <img src="assets/Charola-grande.png" alt="Charola Grande — sushi tray large" loading="lazy">
               </div>
               <div class="menu-card__body">
@@ -1664,6 +1854,12 @@
          REVIEWS
     ════════════════════════════════════════════════ -->
     <section id="resenas" class="reviews section" aria-labelledby="reviews-title">
+
+      <!-- Mobile background video -->
+      <video class="reviews__bg-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/videos/fondo.MOV" type="video/mp4">
+      </video>
+
       <div class="container">
 
         <header class="section-header animate-fade-up">
@@ -2171,7 +2367,7 @@
         <!-- Brand -->
         <div class="footer__brand">
           <a href="#inicio" class="footer__logo" aria-label="El Palmar — Inicio">
-            <img src="assets/logo-Photoroom.png" alt="El Palmar Mariscos + Sushi" width="90" height="56">
+            <img src="assets/logo.png" alt="El Palmar Mariscos + Sushi" width="90" height="56">
           </a>
           <p data-i18n="footer.tagline">Mariscos + Sushi · Mazatlán</p>
         </div>
@@ -2242,6 +2438,7 @@
   <!-- Scripts — browser-support y language son síncronos para evitar FOUC -->
   <script src="js/browser-support.js"></script>
   <script src="js/language.js"></script>
+  <script src="js/destacados.js" defer></script>
   <script src="js/main.js" defer></script>
 
 </body>

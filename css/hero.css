@@ -202,6 +202,17 @@
 }
 
 /* ── Responsive ───────────────────────────────────── */
+/* ── Mobile Video ─────────────────────────────────── */
+.hero__mobile-video {
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 @media (max-width: 768px) {
   .hero__palm { display: none; }
 
@@ -210,6 +221,11 @@
   }
 
   .hero__title br { display: none; }
+
+  .hero__mobile-video { display: block; }
+
+  .hero__layer,
+  .hero__stars { display: none; }
 }
 
 /* ── Reduced Motion ───────────────────────────────── */
