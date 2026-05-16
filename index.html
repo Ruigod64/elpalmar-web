@@ -3,22 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="El Palmar — Mariscos y Sushi en Mazatlán, Sinaloa. Sabores del Pacífico con precisión japonesa.">
+
+  <!-- ── SEO Principal ───────────────────────────────── -->
+  <title>El Palmar · Mariscos y Sushi en Mazatlán, Sinaloa</title>
+  <meta name="description" content="Restaurante de mariscos y sushi en Mazatlán, Sinaloa. Ceviches, aguachiles, rolls y platillos del Pacífico. Abierto todos los días de 12:00 pm a 10:00 pm. Reservaciones por WhatsApp.">
+  <meta name="keywords" content="restaurante mariscos Mazatlán, sushi Mazatlán, ceviches Mazatlán, aguachiles Sinaloa, El Palmar Mazatlán, mariscos y sushi Sinaloa, rolls Mazatlán, taquiza de mariscos, restaurante zona dorada Mazatlán">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="El Palmar">
   <meta name="theme-color" content="#071828">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="El Palmar · Mariscos + Sushi · Mazatlán">
-  <meta property="og:description" content="Aquí pasamos la vida más sabrosa.">
-  <meta property="og:type" content="restaurant">
-  <meta property="og:locale" content="es_MX">
+  <!-- Geo -->
+  <meta name="geo.region" content="MX-SIN">
+  <meta name="geo.placename" content="Mazatlán, Sinaloa">
+  <meta name="geo.position" content="23.2359;-106.4164">
+  <meta name="ICBM" content="23.2359, -106.4164">
 
-  <title>El Palmar · Mariscos + Sushi · Mazatlán</title>
+  <!-- Canonical -->
+  <link rel="canonical" href="https://elpalmarmzt.com">
+
+  <!-- ── Open Graph (Facebook, WhatsApp, etc.) ──────── -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="El Palmar">
+  <meta property="og:title" content="El Palmar · Mariscos y Sushi · Mazatlán">
+  <meta property="og:description" content="Aquí pasamos la vida más sabrosa. Mariscos del Pacífico y sushi de autor en Mazatlán, Sinaloa. Abierto todos los días.">
+  <meta property="og:url" content="https://elpalmarmzt.com">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:image" content="https://elpalmarmzt.com/assets/logo.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="El Palmar — Mariscos y Sushi en Mazatlán">
+
+  <!-- ── Twitter / X Card ───────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Palmar · Mariscos y Sushi · Mazatlán">
+  <meta name="twitter:description" content="Aquí pasamos la vida más sabrosa. Mariscos del Pacífico y sushi de autor en Mazatlán, Sinaloa.">
+  <meta name="twitter:image" content="https://elpalmarmzt.com/assets/logo.png">
+  <meta name="twitter:image:alt" content="El Palmar — Mariscos y Sushi en Mazatlán">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
 
-  <!-- Open Graph image (update to absolute URL on deploy) -->
-  <meta property="og:image" content="assets/logo.png">
+  <!-- ── Schema.org JSON-LD (Google Rich Results) ───── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "El Palmar",
+    "alternateName": "El Palmar Mariscos y Sushi",
+    "description": "Restaurante de mariscos y sushi en Mazatlán, Sinaloa. Ceviches, aguachiles, rolls y platillos del Pacífico con precisión japonesa.",
+    "url": "https://elpalmarmzt.com",
+    "telephone": "+526695466940",
+    "image": "https://elpalmarmzt.com/assets/logo.png",
+    "logo": "https://elpalmarmzt.com/assets/logo.png",
+    "priceRange": "$$",
+    "servesCuisine": ["Mariscos", "Sushi", "Seafood", "Mexican", "Japanese Fusion"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. del Mar",
+      "addressLocality": "Mazatlán",
+      "addressRegion": "Sinaloa",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 23.2359,
+      "longitude": -106.4164
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "22:00"
+      }
+    ],
+    "hasMap": "https://maps.google.com/?q=El+Palmar+Mazatlan",
+    "sameAs": []
+  }
+  </script>
 
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -248,7 +310,7 @@
     <section id="inicio" class="hero" aria-labelledby="hero-title">
 
       <!-- Mobile hero video -->
-      <video class="hero__mobile-video" autoplay muted loop playsinline aria-hidden="true">
+      <video class="hero__mobile-video" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-hidden="true">
         <source src="assets/videos/hero.mp4" type="video/mp4">
       </video>
 
@@ -1857,7 +1919,7 @@
 
       <!-- Mobile background video -->
       <video class="reviews__bg-video" autoplay muted loop playsinline aria-hidden="true">
-        <source src="assets/videos/fondo.MOV" type="video/mp4">
+        <source src="assets/videos/fondo-compressed.mp4" type="video/mp4">
       </video>
 
       <div class="container">

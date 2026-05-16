@@ -201,10 +201,12 @@
   z-index: 2;
 }
 
-/* ── Responsive ───────────────────────────────────── */
 /* ── Mobile Video ─────────────────────────────────── */
+/*
+  Default: video visible — iOS Safari no carga recursos con display:none.
+  En desktop lo ocultamos con min-width, no al revés.
+*/
 .hero__mobile-video {
-  display: none;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -213,6 +215,12 @@
   z-index: 0;
 }
 
+/* Desktop: ocultar video, mostrar parallax (comportamiento original) */
+@media (min-width: 769px) {
+  .hero__mobile-video { display: none; }
+}
+
+/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 768px) {
   .hero__palm { display: none; }
 
@@ -221,8 +229,6 @@
   }
 
   .hero__title br { display: none; }
-
-  .hero__mobile-video { display: block; }
 
   .hero__layer,
   .hero__stars { display: none; }
