@@ -18,8 +18,8 @@
 
       /* Hero */
       'hero.eyebrow':   'Mazatlán, Sinaloa · México',
-      'hero.title':     'Aquí pasamos',
-      'hero.title2':    'la vida más sabrosa.',
+      'hero.title':     'Aquí la vida',
+      'hero.title2':    'es más sabrosa.',
       'hero.subtitle':  'Mariscos que recuerdan el Pacífico. Sushi que reescribe lo que conoces del mar.',
       'hero.cta':       'Explorar el menú',
       'hero.cta2':      'Reservar mesa',
@@ -580,8 +580,8 @@
 
       /* Hero */
       'hero.eyebrow':   'Mazatlán, Sinaloa · Mexico',
-      'hero.title':     'This is where',
-      'hero.title2':    'life tastes its best.',
+      'hero.title':     'Here, life',
+      'hero.title2':    'is more flavorful.',
       'hero.subtitle':  'Seafood that remembers the Pacific. Sushi that rewrites everything you know about the sea.',
       'hero.cta':       'Explore the menu',
       'hero.cta2':      'Reserve a table',
