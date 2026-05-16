@@ -246,7 +246,6 @@
 
 /* ── Background Video (mobile) ────────────────────── */
 .reviews__bg-video {
-  display: none;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -256,13 +255,15 @@
   opacity: 0.25;
 }
 
+@media (min-width: 769px) {
+  .reviews__bg-video { display: none; }
+}
+
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 768px) {
   .review-card {
     flex: 0 0 290px;
   }
-
-  .reviews__bg-video { display: block; }
 
   .reviews .container { position: relative; z-index: 1; }
 }
