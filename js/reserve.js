@@ -47,7 +47,7 @@
 
   function guestsLabel(val) {
     if (!val) return '';
-    var map = { '11-15': '11 – 15', '16-20': '16 – 20', '20+': '+20' };
+    var map = { '11-15': '11 – 15', '15+': '+15' };
     return map[val] || val;
   }
 
@@ -65,7 +65,7 @@
       msg += line('  Date',   formatDate(data.date));
       msg += line('  Time',   formatTime(data.time));
       if (data.notes) msg += line('  Notes', data.notes);
-      msg += nl + 'Thank you!';
+      msg += nl + 'Thank you! I await your confirmation.';
     } else {
       msg  = 'Hola El Palmar, quisiera reservar una mesa.' + nl + nl;
       msg += line('  Nombre',   data.name);
@@ -74,7 +74,7 @@
       msg += line('  Fecha',    formatDate(data.date));
       msg += line('  Hora',     formatTime(data.time));
       if (data.notes) msg += line('  Notas', data.notes);
-      msg += nl + 'Gracias!';
+      msg += nl + 'Gracias! Espero su confirmación.';
     }
     return msg;
   }
@@ -85,10 +85,18 @@
     var valid  = true;
 
     fields.forEach(function (id) {
-      var el   = inputEl(id);
+      var el    = inputEl(id);
       var empty = !el || !el.value.trim();
-      setError(id, empty);
-      if (empty) valid = false;
+      var bad   = false;
+
+      if (!empty && id === 'time') {
+        var parts = el.value.split(':');
+        var mins  = parseInt(parts[0], 10) * 60 + parseInt(parts[1] || 0, 10);
+        bad = mins < 720 || mins > 1320; /* 12:00 = 720min, 22:00 = 1320min */
+      }
+
+      setError(id, empty || bad);
+      if (empty || bad) valid = false;
     });
 
     return valid;
@@ -127,10 +135,31 @@
     el.addEventListener('change', function () { setError(id, false); });
   });
 
-  /* ── Min date = today ───────────────────────────── */
+  /* ── Min date = tomorrow ────────────────────────── */
   var dateInput = inputEl('date');
   if (dateInput) {
-    dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.setAttribute('min', tomorrow.toISOString().split('T')[0]);
   }
+
+  /* ── Custom time picker sync ─────────────────────── */
+  var hourSel    = document.getElementById('reserve-time-hour');
+  var minSel     = document.getElementById('reserve-time-min');
+  var timeHidden = inputEl('time');
+
+  function syncTimePicker() {
+    var h = hourSel ? hourSel.value : '';
+    var m = minSel  ? minSel.value  : '';
+    if (!h || !m) { if (timeHidden) timeHidden.value = ''; return; }
+    var h24 = parseInt(h, 10) === 12 ? 12 : parseInt(h, 10) + 12;
+    if (timeHidden) {
+      timeHidden.value = String(h24).padStart(2, '0') + ':' + m;
+      setError('time', false);
+    }
+  }
+
+  if (hourSel) hourSel.addEventListener('change', syncTimePicker);
+  if (minSel)  minSel.addEventListener('change', syncTimePicker);
 
 })();

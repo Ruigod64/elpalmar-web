@@ -162,6 +162,27 @@
   animation: fadeUp 0.7s ease-out 0.85s forwards;
 }
 
+/* ── Delivery CTA (below hero CTAs) ──────────────── */
+.hero__delivery-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 1.05s forwards;
+}
+
+.hero__or {
+  font-family: var(--font-brand);
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  user-select: none;
+}
+
 /* ── Scroll Indicator ─────────────────────────────── */
 .hero__scroll {
   position: absolute;

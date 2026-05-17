@@ -42,7 +42,7 @@
 }
 
 .menu .section-header p {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .menu .section-header .tag {
@@ -98,7 +98,7 @@
   text-transform: uppercase;
   border: 1.5px solid transparent;
   background: transparent;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.72);
   cursor: pointer;
   transition:
     color var(--transition-fast),
@@ -150,13 +150,13 @@
 
 /* ── Menu Card ────────────────────────────────────── */
 .menu-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(61, 200, 232, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(61, 200, 232, 0.22);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.30);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.38);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transition:
     transform var(--transition-base),
     box-shadow var(--transition-base),
@@ -234,15 +234,16 @@
 
 .menu-card__name {
   font-family: var(--font-brand);
-  font-size: var(--fs-base);
-  font-weight: var(--fw-regular);
+  font-size: var(--fs-md, 1.05rem);
+  font-weight: var(--fw-semibold);
   color: var(--color-white);
   margin-bottom: var(--space-2);
+  letter-spacing: 0.01em;
 }
 
 .menu-card__desc {
   font-size: var(--fs-sm);
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.74);
   line-height: var(--lh-normal);
   max-width: none;
   margin: 0 0 var(--space-4);
@@ -265,7 +266,7 @@
   font-size: var(--fs-xs);
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.40);
+  color: rgba(255, 255, 255, 0.58);
 }
 
 /* ── Panel Subtitle ──────────────────────────────── */
@@ -288,13 +289,13 @@
 .menu__list {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.30);
   margin-bottom: var(--space-8);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
 .menu-list-item {
@@ -302,8 +303,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-4);
-  padding: var(--space-4) var(--space-6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   transition: background var(--transition-fast);
 }
 
@@ -323,14 +324,16 @@
 .menu-list-item__name {
   font-family: var(--font-brand);
   font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
   color: var(--color-white);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  letter-spacing: 0.01em;
 }
 
 .menu-list-item__desc {
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.50);
-  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.5;
 }
 
 .menu-list-item__prices {
@@ -344,6 +347,7 @@
 .menu-list-item__price {
   font-family: var(--font-brand);
   font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
   color: var(--color-orange);
   white-space: nowrap;
 }
@@ -352,7 +356,7 @@
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.55);
   display: block;
 }
 

@@ -284,3 +284,125 @@
     transition: none;
   }
 }
+
+/* ── Lightbox ─────────────────────────────────────── */
+.dest-lb {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-cursor) - 2); /* 58: above nav/preloader, below cursor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 24, 40, 0.94);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 280ms ease;
+  padding: var(--space-6, 1.5rem);
+}
+
+.dest-lb:not([hidden]) {
+  opacity: 1;
+}
+
+.dest-lb[hidden] {
+  display: none;
+}
+
+.dest-lb__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90vw, 800px);
+  max-height: 90vh;
+  gap: var(--space-3, 0.75rem);
+}
+
+.dest-lb__img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  transition: opacity 200ms ease;
+}
+
+.dest-lb__caption {
+  font-family: var(--font-brand);
+  font-size: var(--fs-xs, 0.75rem);
+  font-weight: var(--fw-medium, 500);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-cyan-light, #7DE0F5);
+  margin: 0;
+  text-align: center;
+}
+
+.dest-lb__close {
+  position: fixed;
+  top: var(--space-5, 1.25rem);
+  right: var(--space-5, 1.25rem);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  transition: background 180ms ease;
+}
+
+.dest-lb__close:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.dest-lb__close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dest-lb__nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  transition: background 180ms ease, opacity 180ms ease;
+}
+
+.dest-lb__nav:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.dest-lb__nav[hidden] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dest-lb__nav svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dest-lb__prev { left: var(--space-4, 1rem); }
+.dest-lb__next { right: var(--space-4, 1rem); }
+
+/* Cursor pointer on hoverable slides */
+.dest-carousel:hover .dest-slide,
+.dest-carousel.is-paused .dest-slide {
+  cursor: zoom-in;
+}
