@@ -393,14 +393,32 @@
 @media (max-width: 768px) {
   .reserve__card {
     padding: var(--space-8) var(--space-6);
+    overflow: hidden;
   }
 
   .reserve__form {
     grid-template-columns: 1fr;
   }
 
+  .reserve__field,
   .reserve__field--full {
     grid-column: 1;
+    min-width: 0;
+  }
+
+  .reserve__phone-wrap {
+    min-width: 0;
+  }
+
+  .reserve__phone-code {
+    min-width: 0;
+    flex-shrink: 0;
+    max-width: 110px;
+  }
+
+  .reserve__phone-wrap .reserve__input {
+    min-width: 0;
+    flex: 1;
   }
 
   .reserve__actions {
@@ -408,13 +426,17 @@
   }
 
   .reserve__actions .btn {
-    min-width: 100%;
+    min-width: 0;
     width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .reserve__card {
-    padding: var(--space-6) var(--space-5);
+    padding: var(--space-6) var(--space-4);
+    overflow: hidden;
   }
 }
