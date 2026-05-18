@@ -416,6 +416,10 @@
     min-width: 0;
   }
 
+  .reserve__textarea {
+    resize: none;
+  }
+
   .reserve__phone-code {
     min-width: 0;
     flex-shrink: 0;
