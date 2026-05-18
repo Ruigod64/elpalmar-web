@@ -335,12 +335,18 @@
   display: flex;
   gap: var(--space-4);
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .reserve__actions .btn {
-  flex: 1;
-  min-width: 200px;
+  flex: 1 1 200px;
+  min-width: 0;
   justify-content: center;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .reserve__btn-wa {
@@ -423,11 +429,16 @@
 
   .reserve__actions {
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
   }
 
   .reserve__actions .btn {
-    min-width: 0;
+    display: flex;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
     white-space: normal;
     word-break: break-word;
     text-align: center;
